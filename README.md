@@ -1,1 +1,1 @@
-# computational-dostoevsky
+This project will use computational methods to explore the writing of Fyodor Dostoevsky. 
