@@ -29,6 +29,6 @@ Project website found here: http://dostoevsky.obdurodon.org/
 * To go back a directory (i.e. from computational-dostoevsky/meetings to computational-dostoevsky, cd .. (then hit enter)
 * Once changes are made, check with git status 
 * To add changes: git add -A 
-* To commit changes and add a message: git add -m "put message here"
+* To commit changes and add a message: git commit -m "put message here"
 * To push the changes to github: git push 
 * To get the changes onto your machine: git pull
