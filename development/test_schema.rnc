@@ -1,0 +1,21 @@
+start = novel
+novel = element novel {metadata,body}
+metadata = element metadata {author,title,subhead,pub_city,pub_company,pub_year,volume,language,source}
+author = element author {text}
+title = element title {text}
+subhead = element subhead {text}
+pub_city = element pub_city {text}
+pub_company = element pub_company {text}
+pub_year = element pub_year {xsd:integer}
+volume = element volume {xsd:integer}
+language = element language {"Russian"}
+source = element source {text}
+body = element body {chapter+}
+chapter = element chapter {n, p+}
+n = attribute n {xsd:integer}
+p = element p {mixed{speech}*}
+speech = element speech {type,speaker,addressee,text}
+type = attribute type {"direct"|"indirect"|"free_indirect"}
+speaker = attribute speaker {text}
+addressee = attribute addressee {text}
+
