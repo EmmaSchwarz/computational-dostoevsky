@@ -1,21 +1,27 @@
 start = novel
 novel = element novel {metadata,body}
 metadata = element metadata {author,title,subhead,pub_city,pub_company,pub_year,volume,language,source}
-author = element author {text}
-title = element title {text}
-subhead = element subhead {text}
-pub_city = element pub_city {text}
-pub_company = element pub_company {text}
+author = element author {"Dostoevsky"}
+title = element title {"Dvoinik"}
+subhead = element subhead {"Peterburgskaia Poema"}
+pub_city = element pub_city {"Leningrad"}
+pub_company = element pub_company {"Nauka"}
 pub_year = element pub_year {xsd:integer}
 volume = element volume {xsd:integer}
 language = element language {"Russian"}
 source = element source {text}
 body = element body {chapter+}
-chapter = element chapter {n, p+}
+chapter = element chapter {n, letter*, p+}
 n = attribute n {xsd:integer}
+letter = element letter {n, i, p*}
+i = element i {text}
 p = element p {mixed{speech}*}
-speech = element speech {type,speaker,addressee,text}
+speech = element speech {form*,voice,type,speaker,addressee,em,text}
+form = attribute form {"quoted"|"dashed"|"accent"}
+voice = attribute voice {"timid"|"self-confident"|"mocking"}
 type = attribute type {"direct"|"indirect"|"free_indirect"}
 speaker = attribute speaker {text}
 addressee = attribute addressee {text}
+em = element em {form, text}
+
 
