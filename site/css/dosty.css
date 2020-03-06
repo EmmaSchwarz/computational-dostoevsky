@@ -1,0 +1,61 @@
+html {
+    background-color: #738276;
+    color: black;
+}
+
+title {
+    display: none;
+}
+
+body {
+    font-family: "times new roman", times, serif;
+    background-color: #faf0e6;
+    color: black;
+    border: solid black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "palatino linotype", "book antiqua", palatino, serif;
+    font-weight: bold;
+    color: #2f4f4f;
+    display: flex;
+    justify-content: center;
+}
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: #9e619e;
+}
+
+.content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.content img {
+    border-radius: 15px;
+    border: solid black;
+    width: 500px;
+    margin: 10px;
+    margin-top: 2px;
+}
+.details {
+    width: calc(100% - 500px);
+}
+@media only screen and (max-width: 480px) {
+    .content {
+        flex-direction: column;
+    }
+    .details {
+        width: 100%;
+    }
+}
+
+
+
