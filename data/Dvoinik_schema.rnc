@@ -15,15 +15,15 @@ chapter = element chapter {n, letter*, p+}
 n = attribute n {xsd:integer}
 letter = element letter {n, p*}
 p = element p {mixed{speech|page-break}*}
-page-break = element page-break {text}
+page-break = element page-break {empty}
 v = element v {trans, text}
 trans = attribute trans {"think"|"talk"|"wisper"|"shout"}
-speech = element speech {speech, v, voice?, speaker?, addressee?,form*,type,em,text}
+speech = element speech {speech*|v?|voice?|(speaker, addressee)?|form|type|em?|text}
 form = attribute form {"quoted"|"dashed"|"accent"|"italic"|"pause"}
 voice = attribute voice {"timid"|"confident"|"mocking"}
 type = attribute type {"d"|"ind"|"fr"}
-speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"gera"}
-addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"gera"|"reader"}
+speaker = attribute speaker {"gol"|"doub"|"nar"|"pet"|"ger"}
+addressee = attribute addressee {"gol"|"doub"|"nar"|"pet"|"ger"|"reader"}
 em = element em {form, text}
 
 
