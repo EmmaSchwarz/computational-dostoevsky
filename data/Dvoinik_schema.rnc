@@ -16,14 +16,14 @@ n = attribute n {xsd:integer}
 letter = element letter {n, p*}
 p = element p {mixed{speech|page-break}*}
 page-break = element page-break {empty}
-v = element v {trans, text}
-trans = attribute trans {"think"|"talk"|"wisper"|"shout"}
-speech = element speech {speech*|v?|voice?|(speaker, addressee)?|form|type|em?|text}
+ex = element ex {trans, text}
+trans = attribute trans {"think"|"talk"|"wisper"|"shout"|"trembling"|"relaxed"|"speculate"}
+speech = element speech {speech*|ex?|voice?|(speaker, addressee)?|form|type|em?|text}
 form = attribute form {"quoted"|"dashed"|"accent"|"italic"|"pause"}
-voice = attribute voice {"timid"|"confident"|"mocking"}
+voice = attribute voice {"timid"|"confident"|"blaming"|"mocking"}
 type = attribute type {"d"|"ind"|"fr"}
-speaker = attribute speaker {"gol"|"doub"|"nar"|"pet"|"ger"}
-addressee = attribute addressee {"gol"|"doub"|"nar"|"pet"|"ger"|"reader"}
+speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"ger"}
+addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"reader"}
 em = element em {form, text}
 
 
