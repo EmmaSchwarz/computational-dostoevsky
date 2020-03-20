@@ -17,13 +17,13 @@ letter = element letter {n, p*}
 p = element p {mixed{speech|page-break}*}
 page-break = element page-break {empty}
 ex = element ex {trans, text}
-trans = attribute trans {"think"|"talk"|"wisper"|"shout"|"trembling"|"relaxed"|"speculate"}
+trans = attribute trans {"think"|"talk"|"answer"|"wisper"|"shout"|"trembling"|"relaxed"|"speculate"|"continue"|"murmur"|"stop talking"|"order"|"ask"}
 speech = element speech {speech*|ex?|voice?|(speaker, addressee)?|form|type|em?|text}
 form = attribute form {"quoted"|"dashed"|"accent"|"italic"|"pause"}
-voice = attribute voice {"timid"|"confident"|"blaming"|"mocking"}
+voice = attribute voice {"timid"|"confident"|"conflicting"|"mocking"|"justifying"}
 type = attribute type {"d"|"ind"|"fr"}
-speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"ger"}
-addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"reader"}
+speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"kre"|"ger"|"coworker"|"servant"|"AF"}
+addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"kre"|"reader"|"coworker"|"servant"|"AF"}
 em = element em {form, text}
 
 
