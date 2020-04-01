@@ -25,6 +25,42 @@ h6 {
     display: flex;
     justify-content: center;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #CED4CF;
+  border-top: solid black;
+  border-bottom: solid black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-family: "palatino linotype", "book antiqua", palatino, serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 60px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #B7BFB8;
+}
+
+li a:visited {
+    color: black;
+}
+
+p {
+    margin: 10px;
+}
+
 a:link {
     color: black;
 }
@@ -43,7 +79,6 @@ a:visited {
     border: solid black;
     width: 500px;
     margin: 10px;
-    margin-top: 2px;
 }
 .details {
     width: calc(100% - 500px);
