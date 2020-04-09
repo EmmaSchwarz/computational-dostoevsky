@@ -18,11 +18,11 @@ p = element p {mixed{speech|page-break}*}
 page-break = element page-break {empty}
 ex = element ex {trans, text}
 trans = attribute trans {"think"|"talk"|"answer"|"wisper"|"shout"|"trembling"|"relaxed"|"speculate"|"continue"|"murmur"|"stop talking"|"order"|"ask"}
-speech = element speech {speech*|ex?|voice?|(speaker, addressee)?|form|type|em?|text}
+speech = element speech {speech*|ex?|voice?|(speaker, addressee)?|form?|type?|em?|text}
 form = attribute form {"quoted"|"dashed"|"accent"|"italic"|"pause"}
-voice = attribute voice {"timid"|"confident"|"conflicting"|"mocking"|"justifying"}
+voice = attribute voice {"timid"|"confident"|"mocking"}
 type = attribute type {"d"|"ind"|"fr"}
-speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"kre"|"ger"|"coworker"|"servant"|"AF"}
+speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"kre"|"ger"|"coworker"|"servant"|"AF"|"samovar"}
 addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"kre"|"reader"|"coworker"|"servant"|"AF"}
 em = element em {form, text}
 
