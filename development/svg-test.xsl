@@ -45,7 +45,7 @@
                 <!-- ==================================================== -->
                 <!-- X axis labels (counts) and ruling lines              -->
                 <!-- ==================================================== -->
-                <xsl:for-each select="1 to ($maxCount idiv 1)">
+                <xsl:for-each select="1 to xs:integer($maxCount)">
                     <xsl:variable name="xPos" as="xs:integer" select=". * $xScale"/>
                     <line x1="{$xPos}" y1="0" x2="{. * $xScale}"
                         y2="-{$chartHeight + ($interbarSpacing * $yScale)}" stroke="lightgray"/>
