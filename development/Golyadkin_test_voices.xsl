@@ -37,7 +37,7 @@
                     <line x1="{$xPos}" y1="0" x2="{$xPos}"
                         y2="-{$chartHeight + ($interbarSpacing * $yScale)}" stroke="lightgray"/>
                     <text x="{$xPos}" y="20" text-anchor="middle">
-                        <xsl:value-of select="."/>
+                        <xsl:value-of select=". * 5"/>
                     </text>
                 </xsl:for-each>
                 
