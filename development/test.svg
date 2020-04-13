@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="345">
+   <g transform="translate(100, 325)">
+      <line x1="100" y1="0" x2="100" y2="-250" stroke="lightgray"/>
+      <text x="100" y="20" text-anchor="middle">1</text>
+      <line x1="200" y1="0" x2="200" y2="-250" stroke="lightgray"/>
+      <text x="200" y="20" text-anchor="middle">2</text>
+      <line x1="300" y1="0" x2="300" y2="-250" stroke="lightgray"/>
+      <text x="300" y="20" text-anchor="middle">3</text>
+      <line x1="400" y1="0" x2="400" y2="-250" stroke="lightgray"/>
+      <text x="400" y="20" text-anchor="middle">4</text>
+      <line x1="500" y1="0" x2="500" y2="-250" stroke="lightgray"/>
+      <text x="500" y="20" text-anchor="middle">5</text>
+      <line x1="600" y1="0" x2="600" y2="-250" stroke="lightgray"/>
+      <text x="600" y="20" text-anchor="middle">6</text>
+      <line x1="700" y1="0" x2="700" y2="-250" stroke="lightgray"/>
+      <text x="700" y="20" text-anchor="middle">7</text>
+      <line x1="800" y1="0" x2="800" y2="-250" stroke="lightgray"/>
+      <text x="800" y="20" text-anchor="middle">8</text>
+      <line x1="900" y1="0" x2="900" y2="-250" stroke="lightgray"/>
+      <text x="900" y="20" text-anchor="middle">9</text>
+      <rect x="0" y="-75" width="940" height="50" fill="blue"/>
+      <text x="-10"
+            y="-75"
+            dy="25"
+            text-anchor="end"
+            alignment-baseline="middle">timid</text>
+      <rect x="0" y="-150" width="120" height="50" fill="blue"/>
+      <text x="-10"
+            y="-150"
+            dy="25"
+            text-anchor="end"
+            alignment-baseline="middle">mocking</text>
+      <rect x="0" y="-225" width="600" height="50" fill="blue"/>
+      <text x="-10"
+            y="-225"
+            dy="25"
+            text-anchor="end"
+            alignment-baseline="middle">confident</text>
+      <line x1="0"
+            y1="0"
+            x2="0"
+            y2="-250"
+            stroke="black"
+            stroke-linecap="square"/>
+      <line x1="0"
+            y1="0"
+            x2="950"
+            y2="0"
+            stroke="black"
+            stroke-linecap="square"/>
+   </g>
+</svg>

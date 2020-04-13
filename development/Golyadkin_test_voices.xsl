@@ -32,9 +32,9 @@
     <xsl:template match="/">
         <svg height="{$chartHeight + 120}">
             <g transform="translate(100, {$chartHeight + 100})">
-                <xsl:for-each select="1 to xs:integer($maxCount)">
-                    <xsl:variable name="xPos" as="xs:integer" select=". * $xScale"/>
-                    <line x1="{$xPos}" y1="0" x2="{. * $xScale}"
+                <xsl:for-each select="1 to (($maxCount) idiv 5)">
+                    <xsl:variable name="xPos" as="xs:integer" select=". * $xScale * 5"/>
+                    <line x1="{$xPos}" y1="0" x2="{$xPos}"
                         y2="-{$chartHeight + ($interbarSpacing * $yScale)}" stroke="lightgray"/>
                     <text x="{$xPos}" y="20" text-anchor="middle">
                         <xsl:value-of select="."/>
