@@ -4,24 +4,27 @@
     xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="#all"
     version="3.0" xmlns="http://www.w3.org/2000/svg">
     <xsl:output method="xml" indent="yes"/>
-    
+
+
+    <!--  is there a way to put the two different attributes, @voice and @speaker, in the y axis? 
+          I tried to put @voice and @speaker in select attribute of line 12 and group-by of line 37, but of course it did not work.
+          " -->
     <xsl:variable name="sprNumber" as="xs:string+" select="distinct-values(//@voice)"/> 
     <xsl:variable name="barHeight" as="xs:integer" select="5"/>
     <xsl:variable name="interbarSpacing" as="xs:double" select="$barHeight div 2"/>
     <xsl:variable name="yScale" as="xs:integer" select="10"/>
-    <xsl:variable name="xScale" as="xs:integer" select="5"/>
+    <xsl:variable name="xScale" as="xs:integer" select="20"/>
     <xsl:variable name="chartHeight" as="xs:double"
         select="count($sprNumber) * ($barHeight + $interbarSpacing) * $yScale"/>
     <xsl:variable name="maxCount" as="xs:double"
         select="max(for $i in distinct-values(//@voice)
         return
-        count(//speech[@voice eq $i])
-        "/>
-
-    
+        count(//speech[@voice eq $i]))"/>
+   
+    <h1>Frequency of Speech by Goliadkin</h1>
     <xsl:template match="/">
         <svg height="{$chartHeight + 120}">
-            <g transform="translate(100, {$chartHeight + 50})">
+            <g transform="translate(100, {$chartHeight + 100})">
                 <xsl:for-each select="1 to xs:integer($maxCount)">
                     <xsl:variable name="xPos" as="xs:integer" select=". * $xScale"/>
                     <line x1="{$xPos}" y1="0" x2="{. * $xScale}"
@@ -31,9 +34,8 @@
                     </text>
                 </xsl:for-each>
                 
-                
                 <xsl:for-each-group select="//speech" group-by="@voice">
-                    <xsl:sort select="current-grouping-key()" order="descending"/>
+                <xsl:sort select="current-grouping-key()" order="descending"/>
                     <xsl:variable name="yPos"
                         select="position() * ($barHeight + $interbarSpacing) * $yScale"/>
                     <rect x="0" y="-{$yPos}" width="{count(current-group()) * $xScale}"
