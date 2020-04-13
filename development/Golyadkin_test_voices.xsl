@@ -6,9 +6,16 @@
     <xsl:output method="xml" indent="yes"/>
 
 
-    <!--  is there a way to put the two different attributes, @voice and @speaker, in the y axis? 
+    <!--The ultimate graph I was thinking about for the assignment was to have each chapter and the frequency of speech in each axis and then, 
+        to produce several lines for each character, who are Goliadkin's internalized or externalized consciousness. 
+        
+        THe Question I had was: 
+        is there a way to put the two different attributes, @voice and @speaker, in the y axis? 
+        I want to compare the frequency of double, narrator, petrushka (which are @speaker category) and timid, confident, mocking (which are @voice category),
+        and align them in the one axis.
           I tried to put @voice and @speaker in select attribute of line 12 and group-by of line 37, but of course it did not work.
           " -->
+    
     <xsl:variable name="sprNumber" as="xs:string+" select="distinct-values(//@voice)"/> 
     <xsl:variable name="barHeight" as="xs:integer" select="5"/>
     <xsl:variable name="interbarSpacing" as="xs:double" select="$barHeight div 2"/>
