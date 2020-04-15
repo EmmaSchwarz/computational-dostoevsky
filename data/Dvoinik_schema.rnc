@@ -11,19 +11,25 @@ volume = element volume {xsd:integer}
 language = element language {"Russian"}
 source = element source {text}
 body = element body {chapter+}
-chapter = element chapter {n, letter*, p+}
-n = attribute n {xsd:integer}
+chapter = element chapter {id, h2, p+, letter*, poem*, br*}
+id = attribute id {text}
+h2 = element h2 {text}
 letter = element letter {n, p*}
-p = element p {mixed{speech|page-break}*}
-page-break = element page-break {empty}
+n = attribute n {xsd:integer}
+poem = element poem {mixed{br}*}
+p = element p {em?, mixed{speech|br}*}
+br = element br {empty}
 ex = element ex {trans, text}
-trans = attribute trans {"think"|"talk"|"talk to himself"|"answer"|"wisper"|"shout"|"continue"|"continue to himself"|"murmur"|"murmur to himself"|"stop talking"|"order"|"ask"|"grumble"}
-speech = element speech {speech*|ex?|voice?|(speaker, addressee)?|form?|type?|em?|text}
+trans = attribute trans {"think"|"talk"|"talk to himself"|"answer"|"wisper"|"shout"|"continue"|"continue to himself"|"murmur"|"murmur to himself"|"stop talking"|"order"|"ask"|"grumble"|"laught at"}
+speech = element speech {speech*|ex?|voice?|(speaker, addressee)?|form?|type?|em?|ref?|text}
 form = attribute form {"quoted"|"dashed"|"accent"|"italic"|"pause"}
 voice = attribute voice {"timid"|"confident"|"mocking"}
 type = attribute type {"d"|"ind"|"fr"}
-speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"kre"|"ger"|"coworker"|"servant"|"AF"|"samovar"}
-addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"kre"|"reader"|"coworker"|"servant"|"AF"}
+speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"kre"|"ger"|"coworker"|"servant"|"AF"}
+addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"kre"|"reader"|"coworker"|"servant"|"AF"|"others"}
 em = element em {form, text}
+ref = element ref {to, text}
+to = attribute to {"сиамские близнецы"|"сам по себе"|"иезуиты"}
+
 
 
