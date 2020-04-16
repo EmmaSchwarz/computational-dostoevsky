@@ -17,7 +17,7 @@
     <xsl:variable name="maxLength" as="xs:integer" select="count(//chapter) * $xScale + 40"/>
     <xsl:variable name="xScale" as="xs:integer" select="40"/>
     <xsl:variable name="yScale" as="xs:integer" select="40"/>
-    <xsl:variable name="cScale" as="xs:integer" select="8"/>
+    <xsl:variable name="cScale" as="xs:integer" select="20"/>
     <xsl:variable name="nameLookup" as="map(*)"
         select="
         map{
@@ -41,13 +41,11 @@
     <!-- Return                                                           -->
     <!--   xs:double: scale area and return radius                        -->
     <!-- ================================================================ -->
-    <xsl:function name="kiun:radiusFromSpeechCount" as="xs:double">
+    <xsl:function name="kiun:radiusFromArea" as="xs:double">
         <xsl:param name="speechCount" as="xs:integer"/>
-        <xsl:sequence
-            select="
-                $cScale *
-                math:sqrt($speechCount) div math:pi()"
-        />
+        <!-- area = radius^2 * pi -->
+        <xsl:sequence select="
+                math:sqrt($cScale * $speechCount div math:pi())"/>
     </xsl:function>
     <!-- ================================================================ -->
 
@@ -102,7 +100,7 @@
                             select="count($current_chapter/descendant::speech[@speaker eq current()])"/>
 
                         <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
-                            r="{kiun:radiusFromSpeechCount($speech-count)}" fill-opacity="0.2"
+                            r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.2"
                             stroke="black" fill="red"/>
                         <xsl:message
                             select="string-join(($current_chapter/@id, current(), $speech-count), ' : ')"
@@ -116,7 +114,7 @@
                         <xsl:variable name="speech-count" as="xs:integer"
                             select="count($current_chapter/descendant::speech[@voice eq current()])"/>
                         <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
-                            r="{kiun:radiusFromSpeechCount($speech-count)}" fill-opacity="0.5"
+                            r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.5"
                             stroke="black" fill="blue"/>
                         <xsl:message
                             select="string-join(($current_chapter/@id, current(), $speech-count), ' : ')"
@@ -129,8 +127,8 @@
                     <xsl:variable name="speech-count" as="xs:integer"
                         select="count($current_chapter/descendant::speech[@speaker eq 'nar'])"/>
                     <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
-                        r="{kiun:radiusFromSpeechCount($speech-count)}" fill-opacity="0.5"
-                        stroke="black" fill="red"/>
+                        r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.5" stroke="black"
+                        fill="red"/>
                     <xsl:message
                         select="string-join(($current_chapter/@id, 'nar', $speech-count), ' : ')"/>
                 </xsl:for-each>
