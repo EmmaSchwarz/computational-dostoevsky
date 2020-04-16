@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:kiun="http://kiun.org"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2000/svg"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="#all"
     version="3.0">
     <xsl:output method="xml" indent="yes"/>
 
@@ -10,12 +10,11 @@
     <!--                                                                  -->
     <!-- $maxLength as xs:integer : length of X axis                      -->
     <!-- $xScale as xs:integer : scale of x axis                          -->
-    <!-- $yScale as xs:integer : scale of y axis                          -->    
+    <!-- $yScale as xs:integer : scale of y axis                          -->
     <!-- $cScale as xs:integer : scale of area of bubbles                 -->
     <!-- $nameLookup as map(*) : retrieve full char name from abbrev      -->
     <!-- ================================================================ -->
-    <xsl:variable name="maxLength" as="xs:integer"
-        select="count(//chapter) * $xScale + 40"/>
+    <xsl:variable name="maxLength" as="xs:integer" select="count(//chapter) * $xScale + 40"/>
     <xsl:variable name="xScale" as="xs:integer" select="40"/>
     <xsl:variable name="yScale" as="xs:integer" select="40"/>
     <xsl:variable name="cScale" as="xs:integer" select="20"/>
@@ -30,7 +29,7 @@
         }
         "/>
     <!-- ================================================================ -->
-    
+
     <!-- ================================================================ -->
     <!-- Functions                                                        -->
     <!-- ================================================================ -->
