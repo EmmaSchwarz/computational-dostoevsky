@@ -74,9 +74,9 @@
 
                 <!-- what indicates axes -->
                 <!-- sth wrong with chapters -->
-                <text x="{$maxLength div 2}" y="40" text-anchor="middle"
+                <text x="{$maxLength div 2}" y="50" text-anchor="middle"
                     font-size="larger">Chapters</text>
-                <text x="10" y="-270" 
+                <text x="10" y="-260" 
                     text-anchor="end" font-size="larger">Characters in Dialogues</text>
 
 
