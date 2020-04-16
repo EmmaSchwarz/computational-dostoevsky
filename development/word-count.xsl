@@ -15,7 +15,7 @@
     <!--   with punctuation stripped, lower-cased, whitespace-normalized  -->
     <!-- $words as xs:string+ : all word tokens in speeches               -->
     <!-- ================================================================ -->
-    <xsl:variable name="speeches" as="element(speech)+" select="//speech[not(ancestor::speech)]"/>
+    <xsl:variable name="speeches" as="element(speech)+" select="//speech[@speaker='gol'][not(ancestor::speech)]"/>
     <xsl:variable name="speech_text" as="xs:string"
         select="
             string-join($speeches//text(), ' ') !

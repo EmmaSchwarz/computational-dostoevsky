@@ -29,7 +29,7 @@
     <!-- $bigrams as xs:string+ : bigrams                                 -->
     <!--   not necessarily bigrams because speeches are concatenated      -->
     <!-- ================================================================ -->
-    <xsl:variable name="speeches" as="element(speech)+" select="//speech[not(ancestor::speech)]"/>
+    <xsl:variable name="speeches" as="element(speech)+" select="//speech[@speaker='nar'][not(ancestor::speech)]"/>
     <xsl:variable name="speech_text" as="xs:string"
         select="
             string-join($speeches//text(), ' ') !

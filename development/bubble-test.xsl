@@ -9,23 +9,24 @@
     <!-- Stylesheet variables                                             -->
     <!--                                                                  -->
     <!-- $maxLength as xs:integer : length of X axis                      -->
-    <!-- TODO: [kiun will document other variables]                       -->
+    <!-- $xScale as xs:integer : scale of x axis                          -->
+    <!-- $yScale as xs:integer : scale of y axis                          -->    
+    <!-- $cScale as xs:integer : scale of area of bubbles                 -->
     <!-- $nameLookup as map(*) : retrieve full char name from abbrev      -->
     <!-- ================================================================ -->
     <xsl:variable name="maxLength" as="xs:integer"
-        select="count(//div[@class eq 'chapter']) * $xScale"/>
+        select="count(//chapter) * $xScale + 40"/>
     <xsl:variable name="xScale" as="xs:integer" select="40"/>
     <xsl:variable name="yScale" as="xs:integer" select="40"/>
     <xsl:variable name="cScale" as="xs:integer" select="20"/>
     <xsl:variable name="nameLookup" as="map(*)"
         select="
         map{
-            'petru' : 'Petrushka',
-            'doub' : 'Double',
-            'nar' : 'Narrator',
-            'timid' : 'Goljadkin A',
-            'confident' : 'Goljadkin B',
-            'mocking' : 'Goljadkin C'
+        'petru' : 'Petrushka',
+        'doub' : 'Double',
+        'nar' : 'Narrator',
+        'timid' : 'Goliadkin A',
+        'confident' : 'Goliadkin B'
         }
         "/>
     <!-- ================================================================ -->
@@ -60,7 +61,7 @@
             <g transform="translate(100, 400)">
 
                 <!-- horizontal ruling lines and labels on Y axis -->
-                <xsl:for-each select="'nar', 'mocking', 'confident', 'timid', 'doub', 'petru'">
+                <xsl:for-each select="'nar', 'confident', 'timid', 'doub', 'petru'">
                     <!-- horizontal ruling lines  -->
                     <line x1="10" x2="{$maxLength}" y1="-{position() * $yScale}"
                         y2="-{position() * $yScale}" stroke="lightgray" stroke-width="1"
@@ -72,22 +73,22 @@
                 </xsl:for-each>
 
                 <!-- axes -->
-                <line x1="10" x2="10" y1="0" y2="-320" stroke="black" stroke-width="1"/>
+                <line x1="10" x2="10" y1="0" y2="-250" stroke="black" stroke-width="1"/>
                 <line x1="10" x2="{$maxLength}" y1="0" y2="0" stroke="black" stroke-width="1"/>
 
                 <!-- process each chapter -->
-                <xsl:for-each select="//div[@class eq 'chapter']">
+                <xsl:for-each select="//chapter">
 
                     <!-- save chapter to look inside it later -->
-                    <xsl:variable name="current_chapter" as="element(div)" select="."/>
+                    <xsl:variable name="current_chapter" as="element(chapter)" select="."/>
                     <!-- X position is determined by chapter number -->
                     <xsl:variable name="xPos" as="xs:integer" select="position()"/>
 
                     <!-- vertical ruling lines -->
-                    <line x1="{$xPos* $xScale}" x2="{$xPos* $xScale}" y1="0" y2="-320"
+                    <line x1="{$xPos* $xScale}" x2="{$xPos* $xScale}" y1="0" y2="-250"
                         stroke="black" opacity="0.2" stroke-width="1" stroke-dasharray="2 2"/>
                     <!-- Issue 1 -->
-                    <!--Try to bring chapters(//div/@id) in x axis-->
+                    <!--Try to bring chapters(//chapter/@id) in x axis-->
                     <text x="{$xPos* $xScale}" y="15" text-anchor="middle">
                         <xsl:apply-templates select="substring(@id, 3)"/>
                     </text>
@@ -98,7 +99,7 @@
                     <!-- top two characters -->
                     <xsl:for-each select="'petru', 'doub'">
                         <xsl:variable name="position" select="position()"/>
-                        <xsl:variable name="yPos" as="xs:integer+" select="(6, 5)[$position]"/>
+                        <xsl:variable name="yPos" as="xs:integer+" select="(5, 4)[$position]"/>
                         <xsl:variable name="speech-count" as="xs:integer"
                             select="count($current_chapter/descendant::speech[@speaker eq current()])"/>
 
@@ -111,9 +112,9 @@
                     </xsl:for-each>
 
                     <!-- three voices -->
-                    <xsl:for-each select="'timid', 'confident', 'mocking'">
+                    <xsl:for-each select="'timid', 'confident'">
                         <xsl:variable name="position" select="position()"/>
-                        <xsl:variable name="yPos" as="xs:integer+" select="(4, 3, 2)[$position]"/>
+                        <xsl:variable name="yPos" as="xs:integer+" select="(3, 2)[$position]"/>
                         <xsl:variable name="speech-count" as="xs:integer"
                             select="count($current_chapter/descendant::speech[@voice eq current()])"/>
                         <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
