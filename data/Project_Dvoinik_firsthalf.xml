@@ -7,8 +7,8 @@
           <pub_company>Nauka</pub_company>
           <pub_year>1988</pub_year>
           <volume>1</volume>
-          <language><a href="https://rvb.ru/dostoevski/01text/vol1/02.htm"/>Russian</language>
-          <source></source>         
+          <language>Russian</language>
+          <source><a href="https://rvb.ru/dostoevski/01text/vol1/02.htm"/></source>         
      </metadata>
      <body>
      <chapter id="ch1">
