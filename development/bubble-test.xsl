@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:kiun="http://kiun.org"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:kiun="http://kiun.org"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2000/svg"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="#all"
     version="3.0">
@@ -50,13 +50,12 @@
         />
     </xsl:function>
     <!-- ================================================================ -->
-
     <!-- ================================================================ -->
     <!-- Main                                                             -->
     <!-- ================================================================ -->
     <xsl:template match="/">
-        <svg width="3000" height="2000">
-            <g transform="translate(100, 400)">
+        <svg width="3000" height="3000">
+            <g transform="translate(200, 400)">
 
                 <!-- horizontal ruling lines and labels on Y axis -->
                 <xsl:for-each select="'nar', 'confident', 'timid', 'doub', 'petru'">
@@ -74,6 +73,17 @@
                 <line x1="10" x2="10" y1="0" y2="-250" stroke="black" stroke-width="1"/>
                 <line x1="10" x2="{$maxLength}" y1="0" y2="0" stroke="black" stroke-width="1"/>
 
+
+                <!-- what indicates axes -->
+                <!-- sth wrong with chapters -->
+                <text x="{$maxLength div 2}" y="40" text-anchor="middle"
+                    font-size="larger">Chapters</text>
+                <text x="10" y="-270" 
+                    text-anchor="end" font-size="larger">Characters in Dialogues</text>
+
+
+
+
                 <!-- process each chapter -->
                 <xsl:for-each select="//chapter">
 
@@ -87,8 +97,10 @@
                         stroke="black" opacity="0.2" stroke-width="1" stroke-dasharray="2 2"/>
                     <!-- Issue 1 -->
                     <!--Try to bring chapters(//chapter/@id) in x axis-->
-                    <text x="{$xPos* $xScale}" y="15" text-anchor="middle">
-                        <xsl:apply-templates select="substring(@id, 3)"/>
+                    <text x="{$xPos* $xScale}" y="15" text-anchor="middle" text-decoration="underline">
+                        <a xlink:href="http://dostoevsky.obdurodon.org/text.xhtml#{@id}">
+                            <xsl:apply-templates select="substring(@id, 3)"/>
+                        </a>
                     </text>
 
 
