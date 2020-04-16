@@ -74,12 +74,13 @@ a:visited {
     align-items: flex-start;
     justify-content: flex-start;
 }
-.content img {
+.content img.cover {
     border-radius: 15px;
     border: solid black;
     width: 500px;
     margin: 10px;
 }
+
 .details {
     width: calc(100% - 500px);
 }
