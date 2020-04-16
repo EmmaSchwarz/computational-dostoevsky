@@ -17,7 +17,7 @@
     <xsl:variable name="maxLength" as="xs:integer" select="count(//chapter) * $xScale + 40"/>
     <xsl:variable name="xScale" as="xs:integer" select="40"/>
     <xsl:variable name="yScale" as="xs:integer" select="40"/>
-    <xsl:variable name="cScale" as="xs:integer" select="20"/>
+    <xsl:variable name="cScale" as="xs:integer" select="8"/>
     <xsl:variable name="nameLookup" as="map(*)"
         select="
         map{
@@ -45,9 +45,8 @@
         <xsl:param name="speechCount" as="xs:integer"/>
         <xsl:sequence
             select="
-                ($speechCount * $cScale div math:pi())
-                => math:sqrt()
-                "
+                $cScale *
+                math:sqrt($speechCount) div math:pi()"
         />
     </xsl:function>
     <!-- ================================================================ -->
