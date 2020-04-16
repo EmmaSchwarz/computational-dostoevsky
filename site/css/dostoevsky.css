@@ -81,6 +81,12 @@ a:visited {
     margin: 10px;
 }
 
+img.license {
+    bottom:0px;
+    right:50%;
+    margin: 10px;
+}
+
 .details {
     width: calc(100% - 500px);
 }
