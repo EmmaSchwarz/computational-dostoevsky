@@ -35,17 +35,19 @@
         </text>
     </xsl:function>
 
-    <!--x axis and y axis-->
-    <line x1="0" y1="0" x2="0" y2="-{$chartHeight + ($interbarSpacing * $yScale)}" stroke="black"
-        stroke-linecap="square"/>
-    <line x1="0" y1="0" x2="{$maxCount * $xScale + ($xScale div 2)}" y2="0" stroke="black"
-        stroke-linecap="square"/>
 
     <!-- vertical ruling lines and numerals-->
     <xsl:template match="/">
         <svg height="{$chartHeight + 120}">
             <g transform="translate(200, {$chartHeight + 50})">
-                <xsl:for-each select="0 to xs:integer($maxCount idiv 5)">
+                       
+                <!--x axis and y axis-->
+                <line x1="0" y1="0" x2="0" y2="-{$chartHeight + ($interbarSpacing * $yScale)}" stroke="black"
+                    stroke-linecap="square"/>
+                <line x1="0" y1="0" x2="{$maxCount * $xScale + ($xScale div 2)}" y2="0" stroke="black"
+                    stroke-linecap="square"/>
+                
+                <xsl:for-each select="1 to xs:integer($maxCount idiv 5)">
                     <xsl:variable name="xPos" as="xs:integer" select=". * $xScale * 5"/>
                     <line x1="{$xPos}" y1="0" x2="{$xPos}"
                         y2="-{$chartHeight + ($interbarSpacing * $yScale)}" stroke="lightgray"/>
