@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+	"http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="400" height="400">
+    <!-- Pie chart sample -->
+    <path d="M200,200 L100,0 A100,100 0 0,1 138, 99 z"
+        style="fill:#ff0000; 
+        fill-opacity: 1;
+        stroke:black;
+        stroke-width: 1"/>
+
+
+</svg>
+
+<!-- count(gol speech with addressee) = 24658  which accupies 50.43% of the whole GOl's speech
+     count (gol speech without addresse (which means he talk to himself) = 24228 which occupies 49.57%-->
+
