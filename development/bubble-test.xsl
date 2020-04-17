@@ -25,7 +25,8 @@
         'doub' : 'Double',
         'nar' : 'Narrator',
         'timid' : 'Goliadkin A',
-        'confident' : 'Goliadkin B'
+        'confident' : 'Goliadkin B',
+        'mocking' : 'Goliadkin C'
         }
         "/>
     <!-- ================================================================ -->
@@ -56,7 +57,7 @@
             <g transform="translate(200, 400)">
 
                 <!-- horizontal ruling lines and labels on Y axis -->
-                <xsl:for-each select="'nar', 'confident', 'timid', 'doub', 'petru'">
+                <xsl:for-each select="'nar', 'mocking', 'confident', 'timid', 'doub', 'petru'">
                     <!-- horizontal ruling lines  -->
                     <line x1="10" x2="{$maxLength}" y1="-{position() * $yScale}"
                         y2="-{position() * $yScale}" stroke="lightgray" stroke-width="1"
@@ -68,7 +69,7 @@
                 </xsl:for-each>
 
                 <!-- axes -->
-                <line x1="10" x2="10" y1="0" y2="-250" stroke="black" stroke-width="1"/>
+                <line x1="10" x2="10" y1="0" y2="-280" stroke="black" stroke-width="1"/>
                 <line x1="10" x2="{$maxLength}" y1="0" y2="0" stroke="black" stroke-width="1"/>
 
 
@@ -76,7 +77,7 @@
                 <!-- sth wrong with chapters -->
                 <text x="{$maxLength div 2}" y="50" text-anchor="middle"
                     font-size="larger">Chapters</text>
-                <text x="10" y="-260" 
+                <text x="10" y="-290" 
                     text-anchor="end" font-size="larger">Characters in Dialogues</text>
 
 
@@ -91,7 +92,7 @@
                     <xsl:variable name="xPos" as="xs:integer" select="position()"/>
 
                     <!-- vertical ruling lines -->
-                    <line x1="{$xPos* $xScale}" x2="{$xPos* $xScale}" y1="0" y2="-250"
+                    <line x1="{$xPos* $xScale}" x2="{$xPos* $xScale}" y1="0" y2="-280"
                         stroke="black" opacity="0.2" stroke-width="1" stroke-dasharray="2 2"/>
                     <!-- Issue 1 -->
                     <!--Try to bring chapters(//chapter/@id) in x axis-->
@@ -107,7 +108,7 @@
                     <!-- top two characters -->
                     <xsl:for-each select="'petru', 'doub'">
                         <xsl:variable name="position" select="position()"/>
-                        <xsl:variable name="yPos" as="xs:integer+" select="(5, 4)[$position]"/>
+                        <xsl:variable name="yPos" as="xs:integer+" select="(6, 5)[$position]"/>
                         <xsl:variable name="speech-count" as="xs:integer"
                             select="count($current_chapter/descendant::speech[@speaker eq current()])"/>
 
@@ -120,9 +121,9 @@
                     </xsl:for-each>
 
                     <!-- three voices -->
-                    <xsl:for-each select="'timid', 'confident'">
+                    <xsl:for-each select="'timid', 'confident', 'mocking'">
                         <xsl:variable name="position" select="position()"/>
-                        <xsl:variable name="yPos" as="xs:integer+" select="(3, 2)[$position]"/>
+                        <xsl:variable name="yPos" as="xs:integer+" select="(4, 3, 2)[$position]"/>
                         <xsl:variable name="speech-count" as="xs:integer"
                             select="count($current_chapter/descendant::speech[@voice eq current()])"/>
                         <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
