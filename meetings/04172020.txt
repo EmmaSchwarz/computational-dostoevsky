@@ -1,0 +1,6 @@
+04/17/2020
+1. Fixed a Pie chart for Goliadkin's externalized and internalized speech
+  : the calculation of @sin and @cos was wrong
+2. Discussion about the site pages
+  : the links to the texts in the map image and the charts
+3. to have daily scrum mettings for the project 

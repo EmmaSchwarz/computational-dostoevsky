@@ -1,0 +1,7 @@
+04182020
+Daily meeting between Emma and Kiun
+1. Set the realistic goal to complete the project
+2. Emma will take care of the site pages. Kiun will take care of the (additional) visualization of the text and the methodology section 
+3. Emma - to complete the mark-ups by Monday
+4. Kiun - complete the pie charts, based on string-lengh and word-count
+5. Disucussion about how to improve the site pages
