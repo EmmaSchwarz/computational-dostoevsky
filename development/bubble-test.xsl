@@ -13,6 +13,7 @@
     <!-- $yScale as xs:integer : scale of y axis                          -->
     <!-- $cScale as xs:integer : scale of area of bubbles                 -->
     <!-- $nameLookup as map(*) : retrieve full char name from abbrev      -->
+    <!-- &#x0A; not working for svg                                       -->
     <!-- ================================================================ -->
     <xsl:variable name="maxLength" as="xs:integer" select="count(//chapter) * $xScale + 40"/>
     <xsl:variable name="xScale" as="xs:integer" select="40"/>
@@ -24,9 +25,8 @@
         'petru' : 'Petrushka',
         'doub' : 'Double',
         'nar' : 'Narrator',
-        'timid' : 'Goliadkin A',
-        'confident' : 'Goliadkin B',
-        'mocking' : 'Goliadkin C'
+        'timid' : 'Goliadkin for himself'
+
         }
         "/>
     <!-- ================================================================ -->
@@ -53,7 +53,7 @@
     <!-- Main                                                             -->
     <!-- ================================================================ -->
     <xsl:template match="/">
-        <svg width="3000" height="3000">
+        <svg width="1000" height="1000">
             <g transform="translate(200, 400)">
 
                 <!-- horizontal ruling lines and labels on Y axis -->
@@ -65,8 +65,8 @@
                     <!-- speaker name labels on Y axis -->
                     <text x="-10" y="-{position() * $yScale}" text-anchor="end">
                         <xsl:value-of select="$nameLookup(.)"/>
-                    </text>
-                </xsl:for-each>
+                    </text>               
+             </xsl:for-each>
 
                 <!-- axes -->
                 <line x1="10" x2="10" y1="0" y2="-280" stroke="black" stroke-width="1"/>
@@ -104,7 +104,6 @@
 
 
                     <!-- Y position is determined by character or voice -->
-
                     <!-- top two characters -->
                     <xsl:for-each select="'petru', 'doub'">
                         <xsl:variable name="position" select="position()"/>
@@ -120,6 +119,7 @@
                         />
                     </xsl:for-each>
 
+
                     <!-- three voices -->
                     <xsl:for-each select="'timid', 'confident', 'mocking'">
                         <xsl:variable name="position" select="position()"/>
@@ -129,13 +129,33 @@
                         <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
                             r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.5"
                             stroke="black" fill="blue"/>
-                        <xsl:message
+                      <xsl:message
                             select="string-join(($current_chapter/@id, current(), $speech-count), ' : ')"
                         />
                     </xsl:for-each>
-
+ 
+<!--   Changes I made for tspan element --> 
+<!--   x labels for Goliadkin's inner voices in multiple-lines       -->                    
+                    <xsl:for-each select="'confident'">
+                        <text x="-10" y="-{position() * $yScale}" text-anchor="end">
+                            <tspan>Goliadkin-confident</tspan>
+                            <tspan dy="15">for the other</tspan>
+                        </text>
+                    </xsl:for-each>
+                    <xsl:for-each select="'mocking'">
+                        <text x="-10" y="-{position() * $yScale}" text-anchor="end">
+                            <tspan>Goliadkin-mocking</tspan>
+                            <tspan dy="15">for the other</tspan>
+                        </text>
+                    </xsl:for-each>
+          
+          
+<!--   Then, it shows the changed x labels above in "nar" position, so I made it into a separate with for-each attribute,
+the result is the same -->                   
                     <!-- narrator (last character) -->
-                    <xsl:variable name="yPos" as="xs:integer" select="1"/>
+                    <xsl:for-each select="'nar'">      
+                        <xsl:variable name="position" select="position()"/>
+                        <xsl:variable name="yPos" as="xs:integer" select="1[$position]"/>
                     <!-- process Narrator -->
                     <xsl:variable name="speech-count" as="xs:integer"
                         select="count($current_chapter/descendant::speech[@speaker eq 'nar'])"/>
@@ -144,6 +164,7 @@
                         fill="red"/>
                     <xsl:message
                         select="string-join(($current_chapter/@id, 'nar', $speech-count), ' : ')"/>
+                    </xsl:for-each>
                 </xsl:for-each>
             </g>
         </svg>
