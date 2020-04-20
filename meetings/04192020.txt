@@ -1,0 +1,6 @@
+04192020
+Emma continues to work on mark-ups for the second half of Double
+Kiun tried to find a way to figure out word-count of Goliadkin's speech and create multiple-lined lables for the y-axis.
+: When Emma finishes, I will re-calculate the word-count and string-lengh count and remake pie charts and add the additional markups for the repetitive words so that I could make a simple bar chart for them. I am not sure I can try multiple variables. 
+
+The scrum meeting will be held at 6 on Monday, since Emma has class. 
