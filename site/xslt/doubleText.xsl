@@ -25,5 +25,7 @@
     </xsl:template>
     <xsl:template match= "novel//p">
         <p><xsl:apply-templates/></p>
+        <em><xsl:apply-templates select="speech[@form='quoted']"/></em>
+        <b><xsl:apply-templates select="speech[@form='dashed']"/></b>
     </xsl:template>
 </xsl:stylesheet>

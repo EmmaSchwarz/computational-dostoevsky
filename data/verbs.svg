@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="682.5">
+   <g transform="translate(200, 612.5)">
+      <line x1="0"
+            y1="0"
+            x2="0"
+            y2="-575"
+            stroke="black"
+            stroke-linecap="square"/>
+      <line x1="0"
+            y1="0"
+            x2="830"
+            y2="0"
+            stroke="black"
+            stroke-linecap="square"/>
+      <line x1="100" y1="0" x2="100" y2="-575" stroke="lightgray"/>
+      <text x="100" y="20" text-anchor="middle">5</text>
+      <line x1="200" y1="0" x2="200" y2="-575" stroke="lightgray"/>
+      <text x="200" y="20" text-anchor="middle">10</text>
+      <line x1="300" y1="0" x2="300" y2="-575" stroke="lightgray"/>
+      <text x="300" y="20" text-anchor="middle">15</text>
+      <line x1="400" y1="0" x2="400" y2="-575" stroke="lightgray"/>
+      <text x="400" y="20" text-anchor="middle">20</text>
+      <line x1="500" y1="0" x2="500" y2="-575" stroke="lightgray"/>
+      <text x="500" y="20" text-anchor="middle">25</text>
+      <line x1="600" y1="0" x2="600" y2="-575" stroke="lightgray"/>
+      <text x="600" y="20" text-anchor="middle">30</text>
+      <line x1="700" y1="0" x2="700" y2="-575" stroke="lightgray"/>
+      <text x="700" y="20" text-anchor="middle">35</text>
+      <line x1="800" y1="0" x2="800" y2="-575" stroke="lightgray"/>
+      <text x="800" y="20" text-anchor="middle">40</text>
+      <rect x="0" y="-487.5" width="60" height="25" fill="red"/>
+      <text x="-10"
+            y="-487.5"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">shout</text>
+      <rect x="0" y="-450" width="60" height="25" fill="red"/>
+      <text x="-10"
+            y="-450"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">order</text>
+      <rect x="0" y="-412.5" width="140" height="25" fill="red"/>
+      <text x="-10"
+            y="-412.5"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">answer</text>
+      <rect x="0" y="-375" width="40" height="25" fill="red"/>
+      <text x="-10"
+            y="-375"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">ask</text>
+      <rect x="0" y="-337.5" width="660" height="25" fill="pink"/>
+      <text x="-10"
+            y="-337.5"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">talk</text>
+      <rect x="0" y="-300" width="200" height="25" fill="pink"/>
+      <text x="-10"
+            y="-300"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">continue</text>
+      <rect x="0" y="-262.5" width="20" height="25" fill="orange"/>
+      <text x="-10"
+            y="-262.5"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">grumble</text>
+      <rect x="0" y="-225" width="40" height="25" fill="orange"/>
+      <text x="-10"
+            y="-225"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">murmur</text>
+      <rect x="0" y="-187.5" width="140" height="25" fill="orange"/>
+      <text x="-10"
+            y="-187.5"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">whisper</text>
+      <rect x="0" y="-150" width="320" height="25" fill="turquoise"/>
+      <text x="-10"
+            y="-150"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">talk to himself</text>
+      <rect x="0" y="-112.5" width="60" height="25" fill="turquoise"/>
+      <text x="-10"
+            y="-112.5"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">murmur to himself</text>
+      <rect x="0" y="-75" width="140" height="25" fill="turquoise"/>
+      <text x="-10"
+            y="-75"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">whisper</text>
+      <rect x="0" y="-37.5" width="820" height="25" fill="blue"/>
+      <text x="-10"
+            y="-37.5"
+            dy="12.5"
+            text-anchor="end"
+            alignment-baseline="middle">think</text>
+   </g>
+</svg>
