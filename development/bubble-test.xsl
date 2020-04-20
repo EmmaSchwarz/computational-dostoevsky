@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:kiun="http://kiun.org"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:kiun="http://kiun.org"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2000/svg"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="#all"
-    version="3.0">
-    <xsl:output method="xml" indent="yes"/>
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+    exclude-result-prefixes="#all" version="3.0">
+    <!-- set @indent to "no" to fix <tspan> spacing -->
+    <xsl:output method="xml" indent="no"/>
 
     <!-- ================================================================ -->
     <!-- Stylesheet variables                                             -->
@@ -25,8 +27,9 @@
         'petru' : 'Petrushka',
         'doub' : 'Double',
         'nar' : 'Narrator',
-        'timid' : 'Goliadkin for himself'
-
+        'timid' : 'Goliadkin for himself',
+        'confident' : 'Goliadkin-confident&#x0a;for the other',
+        'mocking' : 'Goliadkin-mocking&#x0a;for the other'
         }
         "/>
     <!-- ================================================================ -->
@@ -48,7 +51,43 @@
         <xsl:sequence select="
                 math:sqrt($cScale * $speechCount div math:pi())"/>
     </xsl:function>
+
     <!-- ================================================================ -->
+    <!-- kiun:twoLine                                                     -->
+    <!--                                                                  -->
+    <!-- Synopsis: identify two-line labels by newline character, split   -->
+    <!--                                                                  -->
+    <!-- Parameter                                                        -->
+    <!--   $inName as xs:string: name of character, from markup           -->
+    <!--                                                                  -->
+    <!-- Return                                                           -->
+    <!--   svg:text, with one or more <tspan> children                    -->
+    <!-- ================================================================ -->
+    <xsl:function name="kiun:twoLine" as="element(svg:text)">
+        <xsl:param name="inName" as="xs:string"/>
+        <xsl:param name="yPos" as="xs:double"/>
+        <xsl:variable name="outName" as="xs:string" select="$nameLookup($inName)"/>
+        <text x="-10" y="{$yPos}" text-anchor="end">
+            <xsl:choose>
+                <xsl:when test="contains($outName, '&#x0a;')">
+                    <xsl:variable name="parts" as="xs:string+" select="tokenize($outName, '&#x0a;')"/>
+                    <tspan x="-10" dy="-03">
+                        <xsl:value-of select="$parts[1]"/>
+                    </tspan>
+                    <tspan x="-10" dy="15">
+                        <xsl:value-of select="$parts[2]"/>
+                    </tspan>
+                </xsl:when>
+                <xsl:otherwise>
+                    <tspan x="-10">
+                        <xsl:value-of select="$outName"/>
+                    </tspan>
+                </xsl:otherwise>
+            </xsl:choose>
+        </text>
+    </xsl:function>
+    <!-- ================================================================ -->
+
     <!-- ================================================================ -->
     <!-- Main                                                             -->
     <!-- ================================================================ -->
@@ -62,11 +101,9 @@
                     <line x1="10" x2="{$maxLength}" y1="-{position() * $yScale}"
                         y2="-{position() * $yScale}" stroke="lightgray" stroke-width="1"
                         stroke-dasharray="2 2"/>
-                    <!-- speaker name labels on Y axis -->
-                    <text x="-10" y="-{position() * $yScale}" text-anchor="end">
-                        <xsl:value-of select="$nameLookup(.)"/>
-                    </text>               
-             </xsl:for-each>
+                    <!-- speaker name labels on Y axis, split long names over two lines -->
+                    <xsl:sequence select="kiun:twoLine(., -position() * $yScale)"/>
+                </xsl:for-each>
 
                 <!-- axes -->
                 <line x1="10" x2="10" y1="0" y2="-280" stroke="black" stroke-width="1"/>
@@ -75,13 +112,10 @@
 
                 <!-- what indicates axes -->
                 <!-- sth wrong with chapters -->
-                <text x="{$maxLength div 2}" y="50" text-anchor="middle"
-                    font-size="larger">Chapters</text>
-                <text x="10" y="-290" 
-                    text-anchor="end" font-size="larger">Characters in Dialogues</text>
-
-
-
+                <text x="{$maxLength div 2}" y="50" text-anchor="middle" font-size="larger"
+                    >Chapters</text>
+                <text x="10" y="-290" text-anchor="end" font-size="larger">Characters in
+                    Dialogues</text>
 
                 <!-- process each chapter -->
                 <xsl:for-each select="//chapter">
@@ -96,7 +130,8 @@
                         stroke="black" opacity="0.2" stroke-width="1" stroke-dasharray="2 2"/>
                     <!-- Issue 1 -->
                     <!--Try to bring chapters(//chapter/@id) in x axis-->
-                    <text x="{$xPos* $xScale}" y="15" text-anchor="middle" text-decoration="underline">
+                    <text x="{$xPos* $xScale}" y="15" text-anchor="middle"
+                        text-decoration="underline">
                         <a xlink:href="http://dostoevsky.obdurodon.org/text.xhtml#{@id}">
                             <xsl:apply-templates select="substring(@id, 3)"/>
                         </a>
@@ -104,13 +139,12 @@
 
 
                     <!-- Y position is determined by character or voice -->
-                    <!-- top two characters -->
+                    <!-- top two characters, Petrushka and Double, are pink -->
                     <xsl:for-each select="'petru', 'doub'">
                         <xsl:variable name="position" select="position()"/>
                         <xsl:variable name="yPos" as="xs:integer+" select="(6, 5)[$position]"/>
                         <xsl:variable name="speech-count" as="xs:integer"
                             select="count($current_chapter/descendant::speech[@speaker eq current()])"/>
-
                         <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
                             r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.2"
                             stroke="black" fill="red"/>
@@ -120,7 +154,7 @@
                     </xsl:for-each>
 
 
-                    <!-- three voices -->
+                    <!-- three voices are blue -->
                     <xsl:for-each select="'timid', 'confident', 'mocking'">
                         <xsl:variable name="position" select="position()"/>
                         <xsl:variable name="yPos" as="xs:integer+" select="(4, 3, 2)[$position]"/>
@@ -129,41 +163,24 @@
                         <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
                             r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.5"
                             stroke="black" fill="blue"/>
-                      <xsl:message
+                        <xsl:message
                             select="string-join(($current_chapter/@id, current(), $speech-count), ' : ')"
                         />
                     </xsl:for-each>
- 
-<!--   Changes I made for tspan element --> 
-<!--   x labels for Goliadkin's inner voices in multiple-lines       -->                    
-                    <xsl:for-each select="'confident'">
-                        <text x="-10" y="-{position() * $yScale}" text-anchor="end">
-                            <tspan>Goliadkin-confident</tspan>
-                            <tspan dy="15">for the other</tspan>
-                        </text>
-                    </xsl:for-each>
-                    <xsl:for-each select="'mocking'">
-                        <text x="-10" y="-{position() * $yScale}" text-anchor="end">
-                            <tspan>Goliadkin-mocking</tspan>
-                            <tspan dy="15">for the other</tspan>
-                        </text>
-                    </xsl:for-each>
-          
-          
-<!--   Then, it shows the changed x labels above in "nar" position, so I made it into a separate with for-each attribute,
-the result is the same -->                   
-                    <!-- narrator (last character) -->
-                    <xsl:for-each select="'nar'">      
+
+                    <!-- narrator (last character) is red -->
+                    <xsl:for-each select="'nar'">
                         <xsl:variable name="position" select="position()"/>
                         <xsl:variable name="yPos" as="xs:integer" select="1[$position]"/>
-                    <!-- process Narrator -->
-                    <xsl:variable name="speech-count" as="xs:integer"
-                        select="count($current_chapter/descendant::speech[@speaker eq 'nar'])"/>
-                    <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
-                        r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.5" stroke="black"
-                        fill="red"/>
-                    <xsl:message
-                        select="string-join(($current_chapter/@id, 'nar', $speech-count), ' : ')"/>
+                        <!-- process Narrator -->
+                        <xsl:variable name="speech-count" as="xs:integer"
+                            select="count($current_chapter/descendant::speech[@speaker eq 'nar'])"/>
+                        <circle cx="{$xPos * $xScale}" cy="-{$yPos * $yScale}"
+                            r="{kiun:radiusFromArea($speech-count)}" fill-opacity="0.5"
+                            stroke="black" fill="red"/>
+                        <xsl:message
+                            select="string-join(($current_chapter/@id, 'nar', $speech-count), ' : ')"
+                        />
                     </xsl:for-each>
                 </xsl:for-each>
             </g>
