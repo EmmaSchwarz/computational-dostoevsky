@@ -1,0 +1,11 @@
+04202020
+We talked in more details about the principles of the mark-ups in the text
+1) Tag only Goliakin's verbs 
+2) even though there is not про себя near Goliadkin's speech verbs, if theri addressee is clearly Goliadkin himself, then mark-up with "to himself"  
+3) Among all the narrator's speech, if it is clear that the narrator is directly speaking to readers, such as using наш герой, then tag the speech with the speaker of "nar"
+4) Sometimes Goliadkin's free indirect speeches are hidden among the narrator's narration. 
+5) All the Goliakin's speech addressing the other externalized characters are to be marked up with the attribute voice of "timid" since we consider that voice as Goliadkin for himself. 
+-Emma continued to work on markups of the second half of the book. She will complete it by 10 pm tomorrow
+-Kiun (mostly with David's help) completed the word-count and bubble-chart. But the result will change after the completion of mark-ups. 
+She will tag the repetitive words and their derivatives so that it would be easier to create an xslt file and its visualization for the graphs. 
+  
