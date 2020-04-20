@@ -92,7 +92,7 @@
     <!-- Main                                                             -->
     <!-- ================================================================ -->
     <xsl:template match="/">
-        <svg width="1000" height="1000">
+        <svg width="1000" height="500">
             <g transform="translate(200, 400)">
 
                 <!-- horizontal ruling lines and labels on Y axis -->
