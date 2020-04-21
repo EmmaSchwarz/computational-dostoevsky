@@ -8,4 +8,6 @@ We talked in more details about the principles of the mark-ups in the text
 -Emma continued to work on markups of the second half of the book. She will complete it by 10 pm tomorrow
 -Kiun (mostly with David's help) completed the word-count and bubble-chart. But the result will change after the completion of mark-ups. 
 She will tag the repetitive words and their derivatives so that it would be easier to create an xslt file and its visualization for the graphs. 
+
+-We will have a meeting at 10 on Tuesday since Emma has the presentation for the other class
   
