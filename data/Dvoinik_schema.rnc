@@ -25,11 +25,12 @@ speech = element speech {speech*|ex?|voice?|(speaker, addressee)?|form?|type?|em
 form = attribute form {"quoted"|"dashed"|"accent"|"italic"|"pause"}
 voice = attribute voice {"timid"|"confident"|"mocking"}
 type = attribute type {"d"|"ind"|"fr"}
-speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"kre"|"ger"|"coworker"|"servant"|"AF"}
-addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"kre"|"reader"|"coworker"|"servant"|"AF"|"others"}
+speaker = attribute speaker {"gol"|"doub"|"nar"|"petru"|"kre"|"ger"|"coworker"|"servant"|"AF"|"vakh"}
+addressee = attribute addressee {"gol"|"doub"|"nar"|"petru"|"ger"|"kre"|"reader"|"coworker"|"servant"|"AF"|"others"|"vakh"}
 em = element em {form, text}
-ref = element ref {to, text}
-to = attribute to {"сиамские близнецы"|"сам по себе"|"иезуиты"}
+ref = element ref {to, whose, text}
+to = attribute to {"сиамские близнецы"|"on my own"|"decorum"|"Jesuit"|"enemy"|"scheme"|"dear"}
+whose = attribute whose {"nar"|"gol"|"kre"|"doub"|"petru"}
 
 
 
