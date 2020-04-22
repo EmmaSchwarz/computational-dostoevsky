@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" height="750">
    <g transform="translate(10)">
       <text x="0" y="95">dear</text>
-      <rect x="90" y="80" width="20" height="20" fill="magenta"/>
+      <rect x="90" y="80" width="20" height="20" fill="red"/>
       <text x="90" y="115" text-anchor="middle" font-size="smaller">7</text>
       <line x1="90"
             y1="80"
@@ -10,7 +10,7 @@
             y2="100"
             stroke="black"
             stroke-width="2"/>
-      <rect x="110" y="80" width="20" height="20" fill="blue"/>
+      <rect x="110" y="80" width="20" height="20" fill="magenta"/>
       <text x="110" y="115" text-anchor="middle" font-size="smaller">11</text>
       <line x1="110"
             y1="80"
@@ -19,7 +19,7 @@
             stroke="black"
             stroke-width="2"/>
       <text x="0" y="175">decorum</text>
-      <rect x="90" y="160" width="20" height="20" fill="red"/>
+      <rect x="90" y="160" width="20" height="20" fill="blue"/>
       <text x="90" y="195" text-anchor="middle" font-size="smaller">1</text>
       <line x1="90"
             y1="160"
@@ -27,9 +27,9 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="110" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="130" y="160" width="20" height="20" fill="red"/>
-      <rect x="150" y="160" width="20" height="20" fill="red"/>
+      <rect x="110" y="160" width="20" height="20" fill="red"/>
+      <rect x="130" y="160" width="20" height="20" fill="blue"/>
+      <rect x="150" y="160" width="20" height="20" fill="blue"/>
       <text x="150" y="195" text-anchor="middle" font-size="smaller">2</text>
       <line x1="150"
             y1="160"
@@ -37,7 +37,7 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="170" y="160" width="20" height="20" fill="red"/>
+      <rect x="170" y="160" width="20" height="20" fill="blue"/>
       <text x="170" y="195" text-anchor="middle" font-size="smaller">3</text>
       <line x1="170"
             y1="160"
@@ -45,9 +45,9 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="190" y="160" width="20" height="20" fill="red"/>
-      <rect x="210" y="160" width="20" height="20" fill="red"/>
-      <rect x="230" y="160" width="20" height="20" fill="red"/>
+      <rect x="190" y="160" width="20" height="20" fill="blue"/>
+      <rect x="210" y="160" width="20" height="20" fill="blue"/>
+      <rect x="230" y="160" width="20" height="20" fill="blue"/>
       <text x="230" y="195" text-anchor="middle" font-size="smaller">4</text>
       <line x1="230"
             y1="160"
@@ -55,21 +55,21 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="250" y="160" width="20" height="20" fill="red"/>
-      <rect x="270" y="160" width="20" height="20" fill="red"/>
-      <rect x="290" y="160" width="20" height="20" fill="red"/>
-      <rect x="310" y="160" width="20" height="20" fill="red"/>
-      <rect x="330" y="160" width="20" height="20" fill="red"/>
-      <rect x="350" y="160" width="20" height="20" fill="red"/>
-      <rect x="370" y="160" width="20" height="20" fill="red"/>
-      <rect x="390" y="160" width="20" height="20" fill="red"/>
-      <rect x="410" y="160" width="20" height="20" fill="red"/>
-      <rect x="430" y="160" width="20" height="20" fill="red"/>
-      <rect x="450" y="160" width="20" height="20" fill="red"/>
-      <rect x="470" y="160" width="20" height="20" fill="red"/>
-      <rect x="490" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="510" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="530" y="160" width="20" height="20" fill="magenta"/>
+      <rect x="250" y="160" width="20" height="20" fill="blue"/>
+      <rect x="270" y="160" width="20" height="20" fill="blue"/>
+      <rect x="290" y="160" width="20" height="20" fill="blue"/>
+      <rect x="310" y="160" width="20" height="20" fill="blue"/>
+      <rect x="330" y="160" width="20" height="20" fill="blue"/>
+      <rect x="350" y="160" width="20" height="20" fill="blue"/>
+      <rect x="370" y="160" width="20" height="20" fill="blue"/>
+      <rect x="390" y="160" width="20" height="20" fill="blue"/>
+      <rect x="410" y="160" width="20" height="20" fill="blue"/>
+      <rect x="430" y="160" width="20" height="20" fill="blue"/>
+      <rect x="450" y="160" width="20" height="20" fill="blue"/>
+      <rect x="470" y="160" width="20" height="20" fill="blue"/>
+      <rect x="490" y="160" width="20" height="20" fill="red"/>
+      <rect x="510" y="160" width="20" height="20" fill="red"/>
+      <rect x="530" y="160" width="20" height="20" fill="red"/>
       <text x="530" y="195" text-anchor="middle" font-size="smaller">6</text>
       <line x1="530"
             y1="160"
@@ -77,9 +77,9 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="550" y="160" width="20" height="20" fill="red"/>
-      <rect x="570" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="590" y="160" width="20" height="20" fill="magenta"/>
+      <rect x="550" y="160" width="20" height="20" fill="blue"/>
+      <rect x="570" y="160" width="20" height="20" fill="red"/>
+      <rect x="590" y="160" width="20" height="20" fill="red"/>
       <text x="590" y="195" text-anchor="middle" font-size="smaller">7</text>
       <line x1="590"
             y1="160"
@@ -87,9 +87,9 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="610" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="630" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="650" y="160" width="20" height="20" fill="magenta"/>
+      <rect x="610" y="160" width="20" height="20" fill="red"/>
+      <rect x="630" y="160" width="20" height="20" fill="red"/>
+      <rect x="650" y="160" width="20" height="20" fill="red"/>
       <text x="650" y="195" text-anchor="middle" font-size="smaller">8</text>
       <line x1="650"
             y1="160"
@@ -97,8 +97,8 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="670" y="160" width="20" height="20" fill="red"/>
-      <rect x="690" y="160" width="20" height="20" fill="magenta"/>
+      <rect x="670" y="160" width="20" height="20" fill="blue"/>
+      <rect x="690" y="160" width="20" height="20" fill="red"/>
       <text x="690" y="195" text-anchor="middle" font-size="smaller">9</text>
       <line x1="690"
             y1="160"
@@ -106,9 +106,9 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="710" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="730" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="750" y="160" width="20" height="20" fill="red"/>
+      <rect x="710" y="160" width="20" height="20" fill="red"/>
+      <rect x="730" y="160" width="20" height="20" fill="red"/>
+      <rect x="750" y="160" width="20" height="20" fill="blue"/>
       <text x="750" y="195" text-anchor="middle" font-size="smaller">10</text>
       <line x1="750"
             y1="160"
@@ -116,9 +116,9 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="770" y="160" width="20" height="20" fill="red"/>
-      <rect x="790" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="810" y="160" width="20" height="20" fill="red"/>
+      <rect x="770" y="160" width="20" height="20" fill="blue"/>
+      <rect x="790" y="160" width="20" height="20" fill="red"/>
+      <rect x="810" y="160" width="20" height="20" fill="blue"/>
       <text x="810" y="195" text-anchor="middle" font-size="smaller">11</text>
       <line x1="810"
             y1="160"
@@ -126,12 +126,12 @@
             y2="180"
             stroke="black"
             stroke-width="2"/>
-      <rect x="830" y="160" width="20" height="20" fill="red"/>
-      <rect x="850" y="160" width="20" height="20" fill="red"/>
-      <rect x="870" y="160" width="20" height="20" fill="magenta"/>
-      <rect x="890" y="160" width="20" height="20" fill="magenta"/>
+      <rect x="830" y="160" width="20" height="20" fill="blue"/>
+      <rect x="850" y="160" width="20" height="20" fill="blue"/>
+      <rect x="870" y="160" width="20" height="20" fill="red"/>
+      <rect x="890" y="160" width="20" height="20" fill="red"/>
       <text x="0" y="255">enemy</text>
-      <rect x="90" y="240" width="20" height="20" fill="red"/>
+      <rect x="90" y="240" width="20" height="20" fill="blue"/>
       <text x="90" y="275" text-anchor="middle" font-size="smaller">1</text>
       <line x1="90"
             y1="240"
@@ -139,7 +139,7 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="110" y="240" width="20" height="20" fill="red"/>
+      <rect x="110" y="240" width="20" height="20" fill="blue"/>
       <text x="110" y="275" text-anchor="middle" font-size="smaller">2</text>
       <line x1="110"
             y1="240"
@@ -149,14 +149,14 @@
             stroke-width="2"/>
       <rect x="130" y="240" width="20" height="20" fill="green"/>
       <rect x="150" y="240" width="20" height="20" fill="green"/>
-      <rect x="170" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="190" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="210" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="230" y="240" width="20" height="20" fill="magenta"/>
+      <rect x="170" y="240" width="20" height="20" fill="red"/>
+      <rect x="190" y="240" width="20" height="20" fill="red"/>
+      <rect x="210" y="240" width="20" height="20" fill="red"/>
+      <rect x="230" y="240" width="20" height="20" fill="red"/>
       <rect x="250" y="240" width="20" height="20" fill="green"/>
       <rect x="270" y="240" width="20" height="20" fill="green"/>
       <rect x="290" y="240" width="20" height="20" fill="green"/>
-      <rect x="310" y="240" width="20" height="20" fill="red"/>
+      <rect x="310" y="240" width="20" height="20" fill="blue"/>
       <text x="310" y="275" text-anchor="middle" font-size="smaller">4</text>
       <line x1="310"
             y1="240"
@@ -164,7 +164,7 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="330" y="240" width="20" height="20" fill="red"/>
+      <rect x="330" y="240" width="20" height="20" fill="blue"/>
       <text x="330" y="275" text-anchor="middle" font-size="smaller">5</text>
       <line x1="330"
             y1="240"
@@ -172,8 +172,8 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="350" y="240" width="20" height="20" fill="red"/>
-      <rect x="370" y="240" width="20" height="20" fill="red"/>
+      <rect x="350" y="240" width="20" height="20" fill="blue"/>
+      <rect x="370" y="240" width="20" height="20" fill="blue"/>
       <text x="370" y="275" text-anchor="middle" font-size="smaller">6</text>
       <line x1="370"
             y1="240"
@@ -181,9 +181,9 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="390" y="240" width="20" height="20" fill="red"/>
-      <rect x="410" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="430" y="240" width="20" height="20" fill="blue"/>
+      <rect x="390" y="240" width="20" height="20" fill="blue"/>
+      <rect x="410" y="240" width="20" height="20" fill="red"/>
+      <rect x="430" y="240" width="20" height="20" fill="magenta"/>
       <text x="430" y="275" text-anchor="middle" font-size="smaller">7</text>
       <line x1="430"
             y1="240"
@@ -191,8 +191,8 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="450" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="470" y="240" width="20" height="20" fill="blue"/>
+      <rect x="450" y="240" width="20" height="20" fill="red"/>
+      <rect x="470" y="240" width="20" height="20" fill="magenta"/>
       <text x="470" y="275" text-anchor="middle" font-size="smaller">8</text>
       <line x1="470"
             y1="240"
@@ -200,7 +200,7 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="490" y="240" width="20" height="20" fill="magenta"/>
+      <rect x="490" y="240" width="20" height="20" fill="red"/>
       <text x="490" y="275" text-anchor="middle" font-size="smaller">9</text>
       <line x1="490"
             y1="240"
@@ -208,8 +208,8 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="510" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="530" y="240" width="20" height="20" fill="magenta"/>
+      <rect x="510" y="240" width="20" height="20" fill="red"/>
+      <rect x="530" y="240" width="20" height="20" fill="red"/>
       <text x="530" y="275" text-anchor="middle" font-size="smaller">10</text>
       <line x1="530"
             y1="240"
@@ -217,15 +217,15 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="550" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="570" y="240" width="20" height="20" fill="red"/>
-      <rect x="590" y="240" width="20" height="20" fill="red"/>
-      <rect x="610" y="240" width="20" height="20" fill="red"/>
-      <rect x="630" y="240" width="20" height="20" fill="red"/>
-      <rect x="650" y="240" width="20" height="20" fill="red"/>
-      <rect x="670" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="690" y="240" width="20" height="20" fill="red"/>
-      <rect x="710" y="240" width="20" height="20" fill="magenta"/>
+      <rect x="550" y="240" width="20" height="20" fill="red"/>
+      <rect x="570" y="240" width="20" height="20" fill="blue"/>
+      <rect x="590" y="240" width="20" height="20" fill="blue"/>
+      <rect x="610" y="240" width="20" height="20" fill="blue"/>
+      <rect x="630" y="240" width="20" height="20" fill="blue"/>
+      <rect x="650" y="240" width="20" height="20" fill="blue"/>
+      <rect x="670" y="240" width="20" height="20" fill="red"/>
+      <rect x="690" y="240" width="20" height="20" fill="blue"/>
+      <rect x="710" y="240" width="20" height="20" fill="red"/>
       <text x="710" y="275" text-anchor="middle" font-size="smaller">11</text>
       <line x1="710"
             y1="240"
@@ -233,11 +233,11 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="730" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="750" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="770" y="240" width="20" height="20" fill="red"/>
-      <rect x="790" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="810" y="240" width="20" height="20" fill="red"/>
+      <rect x="730" y="240" width="20" height="20" fill="red"/>
+      <rect x="750" y="240" width="20" height="20" fill="red"/>
+      <rect x="770" y="240" width="20" height="20" fill="blue"/>
+      <rect x="790" y="240" width="20" height="20" fill="red"/>
+      <rect x="810" y="240" width="20" height="20" fill="blue"/>
       <rect x="830" y="240" width="20" height="20" fill="orange"/>
       <text x="830" y="275" text-anchor="middle" font-size="smaller">12</text>
       <line x1="830"
@@ -247,7 +247,7 @@
             stroke="black"
             stroke-width="2"/>
       <rect x="850" y="240" width="20" height="20" fill=""/>
-      <rect x="870" y="240" width="20" height="20" fill="magenta"/>
+      <rect x="870" y="240" width="20" height="20" fill="red"/>
       <text x="870" y="275" text-anchor="middle" font-size="smaller">13</text>
       <line x1="870"
             y1="240"
@@ -255,10 +255,10 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="890" y="240" width="20" height="20" fill="magenta"/>
-      <rect x="910" y="240" width="20" height="20" fill="red"/>
+      <rect x="890" y="240" width="20" height="20" fill="red"/>
+      <rect x="910" y="240" width="20" height="20" fill="blue"/>
       <text x="0" y="335">Jesuit</text>
-      <rect x="90" y="320" width="20" height="20" fill="magenta"/>
+      <rect x="90" y="320" width="20" height="20" fill="red"/>
       <text x="90" y="355" text-anchor="middle" font-size="smaller">4</text>
       <line x1="90"
             y1="320"
@@ -266,12 +266,12 @@
             y2="340"
             stroke="black"
             stroke-width="2"/>
-      <rect x="110" y="320" width="20" height="20" fill="magenta"/>
-      <rect x="130" y="320" width="20" height="20" fill="magenta"/>
-      <rect x="150" y="320" width="20" height="20" fill="magenta"/>
-      <rect x="170" y="320" width="20" height="20" fill="red"/>
+      <rect x="110" y="320" width="20" height="20" fill="red"/>
+      <rect x="130" y="320" width="20" height="20" fill="red"/>
+      <rect x="150" y="320" width="20" height="20" fill="red"/>
+      <rect x="170" y="320" width="20" height="20" fill="blue"/>
       <text x="0" y="415">on my own</text>
-      <rect x="90" y="400" width="20" height="20" fill="magenta"/>
+      <rect x="90" y="400" width="20" height="20" fill="red"/>
       <text x="90" y="435" text-anchor="middle" font-size="smaller">3</text>
       <line x1="90"
             y1="400"
@@ -279,7 +279,7 @@
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="110" y="400" width="20" height="20" fill="red"/>
+      <rect x="110" y="400" width="20" height="20" fill="blue"/>
       <text x="110" y="435" text-anchor="middle" font-size="smaller">4</text>
       <line x1="110"
             y1="400"
@@ -287,7 +287,7 @@
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="130" y="400" width="20" height="20" fill="magenta"/>
+      <rect x="130" y="400" width="20" height="20" fill="red"/>
       <text x="130" y="435" text-anchor="middle" font-size="smaller">5</text>
       <line x1="130"
             y1="400"
@@ -295,8 +295,8 @@
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="150" y="400" width="20" height="20" fill="red"/>
-      <rect x="170" y="400" width="20" height="20" fill="magenta"/>
+      <rect x="150" y="400" width="20" height="20" fill="blue"/>
+      <rect x="170" y="400" width="20" height="20" fill="red"/>
       <text x="170" y="435" text-anchor="middle" font-size="smaller">6</text>
       <line x1="170"
             y1="400"
@@ -304,7 +304,7 @@
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="190" y="400" width="20" height="20" fill="magenta"/>
+      <rect x="190" y="400" width="20" height="20" fill="red"/>
       <text x="190" y="435" text-anchor="middle" font-size="smaller">12</text>
       <line x1="190"
             y1="400"
@@ -312,11 +312,11 @@
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="210" y="400" width="20" height="20" fill="magenta"/>
-      <rect x="230" y="400" width="20" height="20" fill="magenta"/>
-      <rect x="250" y="400" width="20" height="20" fill="magenta"/>
+      <rect x="210" y="400" width="20" height="20" fill="red"/>
+      <rect x="230" y="400" width="20" height="20" fill="red"/>
+      <rect x="250" y="400" width="20" height="20" fill="red"/>
       <text x="0" y="495">scheme</text>
-      <rect x="90" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="90" y="480" width="20" height="20" fill="red"/>
       <text x="90" y="515" text-anchor="middle" font-size="smaller">2</text>
       <line x1="90"
             y1="480"
@@ -324,7 +324,7 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="110" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="110" y="480" width="20" height="20" fill="red"/>
       <text x="110" y="515" text-anchor="middle" font-size="smaller">3</text>
       <line x1="110"
             y1="480"
@@ -332,7 +332,7 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="130" y="480" width="20" height="20" fill="red"/>
+      <rect x="130" y="480" width="20" height="20" fill="blue"/>
       <text x="130" y="515" text-anchor="middle" font-size="smaller">4</text>
       <line x1="130"
             y1="480"
@@ -340,7 +340,7 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="150" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="150" y="480" width="20" height="20" fill="red"/>
       <text x="150" y="515" text-anchor="middle" font-size="smaller">6</text>
       <line x1="150"
             y1="480"
@@ -348,7 +348,7 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="170" y="480" width="20" height="20" fill="blue"/>
+      <rect x="170" y="480" width="20" height="20" fill="magenta"/>
       <text x="170" y="515" text-anchor="middle" font-size="smaller">7</text>
       <line x1="170"
             y1="480"
@@ -356,10 +356,10 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="190" y="480" width="20" height="20" fill="blue"/>
-      <rect x="210" y="480" width="20" height="20" fill="magenta"/>
-      <rect x="230" y="480" width="20" height="20" fill="magenta"/>
-      <rect x="250" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="190" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="210" y="480" width="20" height="20" fill="red"/>
+      <rect x="230" y="480" width="20" height="20" fill="red"/>
+      <rect x="250" y="480" width="20" height="20" fill="red"/>
       <text x="250" y="515" text-anchor="middle" font-size="smaller">8</text>
       <line x1="250"
             y1="480"
@@ -367,8 +367,8 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="270" y="480" width="20" height="20" fill="magenta"/>
-      <rect x="290" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="270" y="480" width="20" height="20" fill="red"/>
+      <rect x="290" y="480" width="20" height="20" fill="red"/>
       <text x="290" y="515" text-anchor="middle" font-size="smaller">9</text>
       <line x1="290"
             y1="480"
@@ -376,7 +376,7 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="310" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="310" y="480" width="20" height="20" fill="red"/>
       <text x="310" y="515" text-anchor="middle" font-size="smaller">10</text>
       <line x1="310"
             y1="480"
@@ -384,10 +384,10 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="330" y="480" width="20" height="20" fill="magenta"/>
-      <rect x="350" y="480" width="20" height="20" fill="magenta"/>
-      <rect x="370" y="480" width="20" height="20" fill="red"/>
-      <rect x="390" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="330" y="480" width="20" height="20" fill="red"/>
+      <rect x="350" y="480" width="20" height="20" fill="red"/>
+      <rect x="370" y="480" width="20" height="20" fill="blue"/>
+      <rect x="390" y="480" width="20" height="20" fill="red"/>
       <text x="390" y="515" text-anchor="middle" font-size="smaller">11</text>
       <line x1="390"
             y1="480"
@@ -395,8 +395,8 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="410" y="480" width="20" height="20" fill="magenta"/>
-      <rect x="430" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="410" y="480" width="20" height="20" fill="red"/>
+      <rect x="430" y="480" width="20" height="20" fill="red"/>
       <text x="430" y="515" text-anchor="middle" font-size="smaller">13</text>
       <line x1="430"
             y1="480"
@@ -404,6 +404,27 @@
             y2="500"
             stroke="black"
             stroke-width="2"/>
-      <rect x="450" y="480" width="20" height="20" fill="magenta"/>
+      <rect x="450" y="480" width="20" height="20" fill="red"/>
+      <g transform="translate(10, 560)">
+         <rect x="0"
+               y="-10"
+               width="180"
+               height="190"
+               fill="none"
+               stroke="black"
+               stroke-width="1"/>
+         <rect x="10" y="0" height="20" width="20" fill="magenta"/>
+         <text x="40" y="10" alignment-baseline="central">Double</text>
+         <rect x="10" y="30" height="20" width="20" fill=""/>
+         <text x="40" y="40" alignment-baseline="central"/>
+         <rect x="10" y="60" height="20" width="20" fill="red"/>
+         <text x="40" y="70" alignment-baseline="central">Goliadkin</text>
+         <rect x="10" y="90" height="20" width="20" fill="green"/>
+         <text x="40" y="100" alignment-baseline="central">Krestian Ivanovich</text>
+         <rect x="10" y="120" height="20" width="20" fill="blue"/>
+         <text x="40" y="130" alignment-baseline="central">Narrator</text>
+         <rect x="10" y="150" height="20" width="20" fill="orange"/>
+         <text x="40" y="160" alignment-baseline="central">Petrushka</text>
+      </g>
    </g>
 </svg>
