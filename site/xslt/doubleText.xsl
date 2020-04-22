@@ -25,7 +25,14 @@
     </xsl:template>
     <xsl:template match= "novel//p">
         <p><xsl:apply-templates/></p>
-        <em><xsl:apply-templates select="speech[@form='quoted']"/></em>
-        <b><xsl:apply-templates select="speech[@form='dashed']"/></b>
+    </xsl:template>
+    <xsl:template match="novel//speech[@voice='timid']">
+        <em><xsl:apply-templates/></em>
+    </xsl:template>
+    <xsl:template match="novel//speech[@voice='confident']">
+        <b><xsl:apply-templates/></b>
+    </xsl:template>
+    <xsl:template match="novel//speech[@voice='mocking']">
+        <u><xsl:apply-templates/></u>
     </xsl:template>
 </xsl:stylesheet>
