@@ -66,13 +66,13 @@
 <!-- to create a legend for the stacked bargraphs--> 
 <!-- what I had in mind is to write a legend in a row horizontally right beneath the last bar of the scheme -->
                         
-                        <xsl:variable name="fivespeakers" select="distinct-values($currentSpeaker)"/>
+                        <xsl:variable name="fivespeakers" select="distinct-values(@whose)"/>
                         <xsl:variable name="legendXpos" as="xs:integer" select="(position()* 20 + $barShift)"/>
                         <xsl:for-each select="$fivespeakers">
-                            <rect x="{$legendXpos}" y="$yPos[last() + 1]* $yScale" width="20" height="20"
+                            <rect x="{$legendXpos}" y="{$yPos[last()+1]* $yScale}" width="20" height="20"
                                 fill="{$colorsBySpeaker(.)}"/>
-                            <text x="{$legendXpos + 25}" y="$yPos[last() + 1]* $yScale">
-                                <xsl:for-each select="$nameLookup(.)"/>
+                            <text x="{$legendXpos + 25}" y="$yPos[last()+1]* $yScale">
+                                <xsl:value-of select="$nameLookup(.)"/>
                                 </text>
                             </xsl:for-each>
                         
