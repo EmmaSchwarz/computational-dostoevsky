@@ -10,29 +10,29 @@
             </head>
             <body>
                 <h1>
-                    <xsl:apply-templates select="novel//title"/>
+                    <xsl:apply-templates select="//title"/>
                 </h1>
                 <h2>
-                    <xsl:apply-templates select="novel//subhead"/>
+                    <xsl:apply-templates select="//subhead"/>
                 </h2>
-                <xsl:apply-templates select="novel//chapter"/>
+                <xsl:apply-templates select="//chapter"/>
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="novel//chapter">
+    <xsl:template match="chapter">
         <h3><xsl:apply-templates select="h2"/></h3>
         <xsl:apply-templates select="p"/>
     </xsl:template>
-    <xsl:template match= "novel//p">
+    <xsl:template match= "p">
         <p><xsl:apply-templates/></p>
     </xsl:template>
-    <xsl:template match="novel//speech[@voice='timid']">
+    <xsl:template match="speech[@voice='timid']">
         <em><xsl:apply-templates/></em>
     </xsl:template>
-    <xsl:template match="novel//speech[@voice='confident']">
+    <xsl:template match="speech[@voice='confident']">
         <b><xsl:apply-templates/></b>
     </xsl:template>
-    <xsl:template match="novel//speech[@voice='mocking']">
+    <xsl:template match="speech[@voice='mocking']">
         <u><xsl:apply-templates/></u>
     </xsl:template>
 </xsl:stylesheet>
