@@ -74,7 +74,7 @@
                     <tspan x="-10" dy="-03">
                         <xsl:value-of select="$parts[1]"/>
                     </tspan>
-                    <tspan x="-10" dy="15">
+                    <tspan x="-10" dy="18">
                         <xsl:value-of select="$parts[2]"/>
                     </tspan>
                 </xsl:when>
@@ -113,9 +113,9 @@
                 <!-- what indicates axes -->
                 <!-- sth wrong with chapters -->
                 <text x="{$maxLength div 2}" y="50" text-anchor="middle" font-size="larger"
-                    >Chapters</text>
-                <text x="10" y="-290" text-anchor="end" font-size="larger">Characters in
-                    Dialogues</text>
+                    >CHAPTERS</text>
+                <text x="10" y="-290" text-anchor="end" font-size="larger">CHARACTERS in
+                    DIALOGUES</text>
 
                 <!-- process each chapter -->
                 <xsl:for-each select="//chapter">
