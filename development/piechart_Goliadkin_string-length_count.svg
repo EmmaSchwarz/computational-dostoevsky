@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="200%" height="100%">
+
+    <svg width="400" height="400">
+        <!--  Pie chart sample  -->
+        <!--Goliadkin's string-length count-->
+        <!-- Externalized Dialogue: 59685 (45.72%), Intenalized dialogue 70833 (54.27%) -->
+        <g transform="translate(200, 200)">
+            <line x1="-110" y1="0" x2="110" y2="0" stroke="gray"/>
+            <path d="M0,0 L100,0 A100,100 0 0,1 -96.421396, 26.512533 Z" style="fill:#ff0000; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+            <path d="M0,0 L100,0 A100,100 0 1,0 -96.42135, 26.512701 Z" style="fill:#00ff00; fill-opacity: 1; stroke:black; stroke-width: 1"/>
+        </g>
+      
+    </svg>
+    </svg>
