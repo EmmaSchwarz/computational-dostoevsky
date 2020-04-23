@@ -11,7 +11,7 @@
     <xsl:variable name="barHeight" as="xs:integer" select="5"/>
     <xsl:variable name="interbarSpacing" as="xs:double" select="$barHeight div 2"/>
     <xsl:variable name="yScale" as="xs:integer" select="5"/>
-    <xsl:variable name="xScale" as="xs:integer" select="10"/>
+    <xsl:variable name="xScale" as="xs:integer" select="20"/>
     <xsl:variable name="chartHeight" as="xs:double"
         select="count($transes) * ($barHeight + $interbarSpacing) * $yScale"/>
     <xsl:variable name="maxCount" as="xs:double"
@@ -28,12 +28,12 @@
     
                 
                 
-                <xsl:for-each select="1 to xs:integer($maxCount idiv 10)">
+                <xsl:for-each select="1 to xs:integer($maxCount idiv 5)">
                     <xsl:variable name="xPos" as="xs:integer" select=". * $xScale * 5"/>
                     <line x1="{$xPos}" y1="0" x2="{$xPos}"
                         y2="-{$chartHeight + ($interbarSpacing * $yScale)}" stroke="lightgray"/>
                     <text x="{$xPos}" y="20" text-anchor="middle">
-                        <xsl:value-of select=". * 10"/>
+                        <xsl:value-of select=". * 5"/>
                     </text>
                 </xsl:for-each>
 

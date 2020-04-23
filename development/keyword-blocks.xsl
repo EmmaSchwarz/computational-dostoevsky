@@ -9,7 +9,7 @@
     <xsl:variable name="allSpeakers" as="xs:string+"
         select="distinct-values(//@whose) ! lower-case(.) => sort()"/>
     <xsl:variable name="allKeywords" as="xs:string+"
-        select="distinct-values(//@to)[. ne 'сиамские близнецы']"/>
+        select="distinct-values(//@to)"/>
     <xsl:variable name="nameLookup" as="map(*)"
         select="
         map{
@@ -84,3 +84,7 @@
     </xsl:template>
 </xsl:stylesheet>
 <!--  <xsl:for-each select="distinct-values(//@to)[not(. eq 'сиамские близнецы')]"> -->
+<!--    <xsl:variable name="allSpeakers" as="xs:string+"
+        select="distinct-values(//@whose) ! lower-case(.) => sort()"/>   
+    <xsl:variable name="allKeywords" as="xs:string+"
+        select="distinct-values(//@to)[. ne 'сиамские близнецы']"/> -->
