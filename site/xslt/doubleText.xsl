@@ -25,11 +25,9 @@
     </xsl:template>
     <xsl:template match="h2" mode="toc">
         <li>
-            <a href="#{ancestor::chapter/@id}" name="{ancestor::chapter/@id}_toc" id="{ancestor::chapter/@id}_toc">
+            <a href="#{ancestor::chapter/@id}" name="{ancestor::chapter/@id}_toc"
+                id="{ancestor::chapter/@id}_toc">
                 <xsl:apply-templates/>
-                <xsl:text> (</xsl:text>
-                <xsl:apply-templates select="ancestor::chapter/@id"/>
-                <xsl:text>)</xsl:text>
             </a>
         </li>
     </xsl:template>
@@ -38,7 +36,9 @@
     </xsl:template>
     <xsl:template match="chapter">
         <h3>
-            <a href="#{@id}_toc" name="{@id}" id="{@id}"><xsl:apply-templates select="h2"/></a>
+            <a href="#{@id}_toc" name="{@id}" id="{@id}">
+                <xsl:apply-templates select="h2"/>
+            </a>
         </h3>
         <xsl:apply-templates select="p"/>
     </xsl:template>
