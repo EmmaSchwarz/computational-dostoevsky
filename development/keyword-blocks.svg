@@ -246,7 +246,7 @@
             y2="260"
             stroke="black"
             stroke-width="2"/>
-      <rect x="850" y="240" width="20" height="20" fill=""/>
+      <rect x="850" y="240" width="20" height="20" fill="red"/>
       <rect x="870" y="240" width="20" height="20" fill="red"/>
       <text x="870" y="275" text-anchor="middle" font-size="smaller">13</text>
       <line x1="870"
@@ -257,7 +257,7 @@
             stroke-width="2"/>
       <rect x="890" y="240" width="20" height="20" fill="red"/>
       <rect x="910" y="240" width="20" height="20" fill="blue"/>
-      <text x="0" y="335">Jesuit</text>
+      <text x="0" y="335">jesuit</text>
       <rect x="90" y="320" width="20" height="20" fill="red"/>
       <text x="90" y="355" text-anchor="middle" font-size="smaller">4</text>
       <line x1="90"
@@ -409,22 +409,20 @@
          <rect x="0"
                y="-10"
                width="180"
-               height="190"
+               height="160"
                fill="none"
                stroke="black"
                stroke-width="1"/>
          <rect x="10" y="0" height="20" width="20" fill="magenta"/>
          <text x="40" y="10" alignment-baseline="central">Double</text>
-         <rect x="10" y="30" height="20" width="20" fill=""/>
-         <text x="40" y="40" alignment-baseline="central"/>
-         <rect x="10" y="60" height="20" width="20" fill="red"/>
-         <text x="40" y="70" alignment-baseline="central">Goliadkin</text>
-         <rect x="10" y="90" height="20" width="20" fill="green"/>
-         <text x="40" y="100" alignment-baseline="central">Krestian Ivanovich</text>
-         <rect x="10" y="120" height="20" width="20" fill="blue"/>
-         <text x="40" y="130" alignment-baseline="central">Narrator</text>
-         <rect x="10" y="150" height="20" width="20" fill="orange"/>
-         <text x="40" y="160" alignment-baseline="central">Petrushka</text>
+         <rect x="10" y="30" height="20" width="20" fill="red"/>
+         <text x="40" y="40" alignment-baseline="central">Goliadkin</text>
+         <rect x="10" y="60" height="20" width="20" fill="green"/>
+         <text x="40" y="70" alignment-baseline="central">Krestian Ivanovich</text>
+         <rect x="10" y="90" height="20" width="20" fill="blue"/>
+         <text x="40" y="100" alignment-baseline="central">Narrator</text>
+         <rect x="10" y="120" height="20" width="20" fill="orange"/>
+         <text x="40" y="130" alignment-baseline="central">Petrushka</text>
       </g>
    </g>
 </svg>
