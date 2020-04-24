@@ -33,7 +33,7 @@
     <xsl:variable name="barScale" as="xs:integer" select="20"/>
     <!-- end of stylesheet variables -->
     <xsl:template match="/">
-        <svg height="750">
+        <svg width="1000" height="750">
             <g transform="translate(10)">
                 <xsl:for-each select="$allKeywords">
                     <xsl:sort select="lower-case(.)"/>

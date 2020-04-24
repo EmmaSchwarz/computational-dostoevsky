@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" height="750">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750">
    <g transform="translate(10)">
       <text x="0" y="95">dear</text>
       <rect x="90" y="80" width="20" height="20" fill="red"/>
@@ -271,41 +271,41 @@
       <rect x="150" y="320" width="20" height="20" fill="red"/>
       <rect x="170" y="320" width="20" height="20" fill="blue"/>
       <text x="0" y="415">on my own</text>
-      <rect x="90" y="400" width="20" height="20" fill="red"/>
-      <text x="90" y="435" text-anchor="middle" font-size="smaller">3</text>
+      <rect x="90" y="400" width="20" height="20" fill="blue"/>
+      <text x="90" y="435" text-anchor="middle" font-size="smaller">2</text>
       <line x1="90"
             y1="400"
             x2="90"
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="110" y="400" width="20" height="20" fill="blue"/>
-      <text x="110" y="435" text-anchor="middle" font-size="smaller">4</text>
+      <rect x="110" y="400" width="20" height="20" fill="red"/>
+      <text x="110" y="435" text-anchor="middle" font-size="smaller">3</text>
       <line x1="110"
             y1="400"
             x2="110"
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="130" y="400" width="20" height="20" fill="red"/>
-      <text x="130" y="435" text-anchor="middle" font-size="smaller">5</text>
+      <rect x="130" y="400" width="20" height="20" fill="blue"/>
+      <text x="130" y="435" text-anchor="middle" font-size="smaller">4</text>
       <line x1="130"
             y1="400"
             x2="130"
             y2="420"
             stroke="black"
             stroke-width="2"/>
-      <rect x="150" y="400" width="20" height="20" fill="blue"/>
-      <rect x="170" y="400" width="20" height="20" fill="red"/>
-      <text x="170" y="435" text-anchor="middle" font-size="smaller">6</text>
-      <line x1="170"
+      <rect x="150" y="400" width="20" height="20" fill="red"/>
+      <text x="150" y="435" text-anchor="middle" font-size="smaller">5</text>
+      <line x1="150"
             y1="400"
-            x2="170"
+            x2="150"
             y2="420"
             stroke="black"
             stroke-width="2"/>
+      <rect x="170" y="400" width="20" height="20" fill="blue"/>
       <rect x="190" y="400" width="20" height="20" fill="red"/>
-      <text x="190" y="435" text-anchor="middle" font-size="smaller">12</text>
+      <text x="190" y="435" text-anchor="middle" font-size="smaller">6</text>
       <line x1="190"
             y1="400"
             x2="190"
@@ -313,8 +313,24 @@
             stroke="black"
             stroke-width="2"/>
       <rect x="210" y="400" width="20" height="20" fill="red"/>
+      <text x="210" y="435" text-anchor="middle" font-size="smaller">12</text>
+      <line x1="210"
+            y1="400"
+            x2="210"
+            y2="420"
+            stroke="black"
+            stroke-width="2"/>
       <rect x="230" y="400" width="20" height="20" fill="red"/>
       <rect x="250" y="400" width="20" height="20" fill="red"/>
+      <rect x="270" y="400" width="20" height="20" fill="red"/>
+      <rect x="290" y="400" width="20" height="20" fill="blue"/>
+      <text x="290" y="435" text-anchor="middle" font-size="smaller">13</text>
+      <line x1="290"
+            y1="400"
+            x2="290"
+            y2="420"
+            stroke="black"
+            stroke-width="2"/>
       <text x="0" y="495">scheme</text>
       <rect x="90" y="480" width="20" height="20" fill="red"/>
       <text x="90" y="515" text-anchor="middle" font-size="smaller">2</text>

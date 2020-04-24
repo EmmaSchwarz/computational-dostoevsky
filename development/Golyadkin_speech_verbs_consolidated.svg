@@ -99,12 +99,12 @@
             dy="12.5"
             text-anchor="end"
             alignment-baseline="middle">murmur to himself</text>
-      <rect x="0" y="-75" width="70" height="25" fill="turquoise"/>
+      <rect x="0" y="-75" width="50" height="25" fill="turquoise"/>
       <text x="-10"
             y="-75"
             dy="12.5"
             text-anchor="end"
-            alignment-baseline="middle">whisper</text>
+            alignment-baseline="middle">whisper to himself</text>
       <rect x="0" y="-37.5" width="1020" height="25" fill="blue"/>
       <text x="-10"
             y="-37.5"
