@@ -5,7 +5,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     exclude-result-prefixes="#all" version="3.0">
     <!-- set @indent to "no" to fix <tspan> spacing -->
-    <xsl:output method="xml" indent="no"/>
+    <xsl:output method="xml" indent="no" omit-xml-declaration="yes"/>
 
     <!-- ================================================================ -->
     <!-- Stylesheet variables                                             -->
