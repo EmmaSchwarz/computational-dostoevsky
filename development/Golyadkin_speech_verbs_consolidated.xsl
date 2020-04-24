@@ -83,7 +83,7 @@
                 <xsl:for-each select="'grumble', 'murmur', 'whisper'">
                     <xsl:sequence select="kiun:createBar(current(), 8 - position(), 'orange')"/>
                 </xsl:for-each>
-                <xsl:for-each select="'talk to himself', 'murmur to himself', 'whisper'">
+                <xsl:for-each select="'talk to himself', 'murmur to himself', 'whisper to himself'">
                     <xsl:sequence select="kiun:createBar(current(), 5 - position(), 'turquoise')"/>
                 </xsl:for-each>
                 <xsl:for-each select="'think'">
