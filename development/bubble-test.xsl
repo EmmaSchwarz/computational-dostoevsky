@@ -132,7 +132,7 @@
                     <!--Try to bring chapters(//chapter/@id) in x axis-->
                     <text x="{$xPos* $xScale}" y="15" text-anchor="middle"
                         text-decoration="underline">
-                        <a xlink:href="http://dostoevsky.obdurodon.org/text.xhtml#{@id}">
+                        <a xlink:href="http://dostoevsky.obdurodon.org/text.xhtml#{@id}" target="_blank">
                             <xsl:apply-templates select="substring(@id, 3)"/>
                         </a>
                     </text>
