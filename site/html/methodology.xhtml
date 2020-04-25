@@ -8,17 +8,21 @@
     <body>
         <h1>Methodology</h1>
         <!--#include virtual="inc/menu.xhtml" -->
-        <p> To quantify this dialogic discourse, an XML encoding of the text in the original
-            Russian was produced, tagging all instances of speech, as well as their
-            attributes (direct vs. indirect, timid vs. self-confident, et cetera); moreover,
-            to formalize the encoding, RelaxNG was used to write a schema, ensuring that the
-            encoding is not only well-formed, but also adheres to the specifications of our
-            analysis. Regular expressions were used to clean the text and to locate
-            grammatical indications of speech (angled quotation marks or dashes). Following
-            the location of speech acts, each act's attributes were defined. We then counted
-            how often each character (Goliadkin, Goliadkin's double, the narrator) engages
-            in the three types of speech, as well as how Goliadkin's speech acts shift in
-            emotional valence over the course of the work.</p>
+        <p> To quantify this dialogic discourse, an XML encoding of the text in the original Russian
+            was produced, tagging all instances of speech, as well as their attributes (speaker,
+            addressee, voice type); moreover, to formalize the encoding, RelaxNG was used to write a
+            schema, ensuring that the encoding is not only well-formed, but also adheres to the
+            specifications of our analysis. Regular expressions were used to clean the text and to
+            locate grammatical indications of speech (angled quotation marks or dashes). The text
+            was sourced from the following <a href="https://rvb.ru/dostoevski/01text/vol1/02.htm"
+                target="_blank">link</a></p>
+        <p> Following the location of speech acts, each act's attributes were defined. We then
+            counted how often Goliadkin engages in the three speech voicings (timid, confident, and
+            mocking), as well as the patterns of his internal and external discourse. The discourse
+            of others was analyzed through focusing on the transference of words across characters.
+            A combination of XSLT and SVG was used to generate the visualizations, and XSLT was
+            further used to transform the XML encoding of the text into the full view of <em>The
+                Double</em> found on the "Text" page.</p>
         <!--#include virtual="inc/license.xhtml" -->
     </body>
 </html>

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMinYMin meet">
+<svg xmlns="http://www.w3.org/2000/svg" width="200%" height="100%">
     <title></title>
-    <svg width="1000" height="500">
+    <svg width="400" height="400">
         <!--  Pie chart sample  -->
-        <!--Goliadkin's speech word count total 17272 (100%)-->
-        <!-- Externalized dialogue 6110 (35.3230%) Internalized dialogue : 9399 (54.42%)  Goliadkin speaking to Double: 1772 (10.259%)-->
+        <!--Goliadkin's speech word count-->
+        <!-- Externalized dialogue 7873 (45.58%) Internalized dialogue : 54.42%-->
             <g transform="translate(200, 200)">
             <line x1="-110" y1="0" x2="110" y2="0" stroke="gray"/>
             <path d="M0,0 L100,0 A100,100 0 0,1 -96.267663, 27.401293 Z" style="fill:#ff0000; fill-opacity: 1; stroke:black; stroke-width: 1"/>
             <path d="M0,0 L100,0 A100,100 0 1,0 -96.172696, 27.400957 Z" style="fill:#00ff00; fill-opacity: 1; stroke:black; stroke-width: 1"/>
-                <path d="M0,0 L100,0 A100,100 0 0,1 79.933137, 60.089048 Z" style="fill:#0000FF; fill-opacity: 1; stroke:black; stroke-width: 1"/>
             </g>
         
 
