@@ -15,30 +15,13 @@
                 <h2>
                     <xsl:apply-templates select="//subhead"/>
                 </h2>
-                <h3>Оглавление</h3>
-                <ul>
-                    <xsl:apply-templates select="//h2" mode="toc"/>
-                </ul>
                 <xsl:apply-templates select="//chapter"/>
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="h2" mode="toc">
-        <li>
-            <a href="#{ancestor::chapter/@id}" name="{ancestor::chapter/@id}_toc"
-                id="{ancestor::chapter/@id}_toc">
-                <xsl:apply-templates/>
-            </a>
-        </li>
-    </xsl:template>
-    <xsl:template match="chapter" mode="toc">
-        <xsl:apply-templates/>
-    </xsl:template>
     <xsl:template match="chapter">
         <h3>
-            <a href="#{@id}_toc" name="{@id}" id="{@id}">
-                <xsl:apply-templates select="h2"/>
-            </a>
+            <a id="{@id}"><xsl:apply-templates select="h2"/></a>
         </h3>
         <xsl:apply-templates select="p"/>
     </xsl:template>
@@ -48,18 +31,18 @@
         </p>
     </xsl:template>
     <xsl:template match="speech[@voice = 'timid']">
-        <em>
+        <span class="timid">
             <xsl:apply-templates/>
-        </em>
+        </span>
     </xsl:template>
     <xsl:template match="speech[@voice = 'confident']">
-        <b>
+        <span class="confident">
             <xsl:apply-templates/>
-        </b>
+        </span>
     </xsl:template>
     <xsl:template match="speech[@voice = 'mocking']">
-        <u>
+        <span class="mocking">
             <xsl:apply-templates/>
-        </u>
+        </span>
     </xsl:template>
 </xsl:stylesheet>

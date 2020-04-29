@@ -8,21 +8,20 @@
     <body>
         <h1>Methodology</h1>
         <!--#include virtual="inc/menu.xhtml" -->
-        <p> To quantify this dialogic discourse, an XML encoding of the text in the original Russian
-            was produced, tagging all instances of speech, as well as their attributes (speaker,
-            addressee, voice type); moreover, to formalize the encoding, RelaxNG was used to write a
-            schema, ensuring that the encoding is not only well-formed, but also adheres to the
-            specifications of our analysis. Regular expressions were used to clean the text and to
-            locate grammatical indications of speech (angled quotation marks or dashes). The text
-            was sourced from the following <a href="https://rvb.ru/dostoevski/01text/vol1/02.htm"
-                target="_blank">link</a></p>
-        <p> Following the location of speech acts, each act's attributes were defined. We then
-            counted how often Goliadkin engages in the three speech voicings (timid, confident, and
-            mocking), as well as the patterns of his internal and external discourse. The discourse
-            of others was analyzed through focusing on the transference of words across characters.
-            A combination of XSLT and SVG was used to generate the visualizations, and XSLT was
-            further used to transform the XML encoding of the text into the full view of <em>The
-                Double</em> found on the "Text" page.</p>
+        <p>We selected the version of <em>The Double</em> (<em>Двойник</em>) available <a href="https://rvb.ru/dostoevski/01text/vol1/02.htm"
+            target="_blank">here</a> online. It is the digitized form of the printed version from Nauka, St. Petersburg, originally published in 1988. A few typos in the digitized version were corrected after checking the 1866 and 1896 printed copies. </p>
+        <p>The project began with the XML tagging on the text. First, we utilized regular expressions for basic structural markup, but most of the speech elements and their attributes were tagged manually after careful and thorough reading. 
+        </p>
+        <p>The basic element in the text is the speech element with the main attributes of speakers, addressees, and most importantly, voices. The voice attributes were determined according to Bakhtin’s analysis. During Goliadkin's constant internal dialogue with himself, different voices can be found: “I for myself” and “I for the others” (Bakhtin 217). The second voice is a substitute for the actual voice of another person. Since Goliakdin, who desires to be independent from the other’s words or gaze, “lives by his reflection in another” (Bakhtin 214). In the first half of the text, the second voice mostly appears to assure and comfort himself, while in the later parts of the text, it sometimes appears to criticize and mock himself, playing a similar role to the narrator. Therefore, we created the three attributes to indicate Goliadkin’s inner voices, which are in consistent dialogue: Goliadkin for himself, Goliadkin-confident for the other, Goliadkin-mocking for the other. The narrator’s speech is marked only when it is obvious that the narrator tried to engage in a dialogue with Goliadkin or readers: for example, when the narrator utilizes the term “our hero (наш герой)”. This was one of the most complicated tasks in the tagging process, since there are many examples of the vacillating borders between the narration and Goliadkin’s discourse, as Bakhtin indicated, either due to Dostoevskii’s writing style in <em>The Double</em> or mistakes of the editor (Bakhtin 219).
+        </p>
+        <p>Moreoever, we tagged the verbs that indicate Goliadkin’s speech only. They show how frequently, how loudly, and to whom (to the others or to himself) he speaks.  While the speeches in most cases are embedded with the descriptive explanation about the speech, such as “he said,” the verbs could be a useful tool to count the frequency of speeches. 
+        </p>
+        <p>During the process of reading and marking up the text, the words were chosen that best describe Goliadkin’s psychology and mentality, which are not only repeated throughout the text, but seemingly transfer from one’s speech to another. For example, the word decorum (приличие) often appears since Goliadkin is always concerned about how the others would look at him. All of its derivatives, such as impropriety (неприличие, приличнее, неприлчино) were tagged by the same attribute decorum.   
+        </p>
+        <p>Since the project aims to quantify Bakhtin’s interpretation of <em>The Double</em>, we created the various visualizations that would best summarize the patterns and the quantity of the speeches in the text. For the visualization, XSLT and SVG are used to create the bar graph, the pie charts, the bubble chart, and the stacked bar chart. All of them were heavily assisted by Professor David Birnbaum, mentor of this project.
+        </p>
+        <p>In addition, the map image that shows where Goliadkin walked during his fateful night when he met his double, following public humiliation at Klara Olsufievna’s dinner party in chapter 5. The geo-referenced 1860 map of St. Petersburg is available in the Stanford Library Website. Through the help of QGIS, we created the lines of Goliadkin’s route from Izmailovskii Bridge to Shestilavochnaia Street where his house is located. Then, through the help of Image map generator, the links to chapter 5 were added to the image map exported from QGIS. 
+        </p>
         <!--#include virtual="inc/license.xhtml" -->
     </body>
 </html>
